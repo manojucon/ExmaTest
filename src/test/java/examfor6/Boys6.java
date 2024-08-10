@@ -35,7 +35,7 @@ public class Boys6 {
 
     @Test(priority = 1 , dataProvider="testData6Boys",dataProviderClass= testdata6boys.class)
     public void verifyLoginWithValidCredentials(String rollno , String name, String fname) throws InterruptedException {
-        driver.get("https://forms.gle/W5sjqxjWBxDhAMUj7");
+        driver.get("https://forms.gle/S7LkY2N8n86SbQcQA");
         Thread.sleep(400);
         driver.findElement(By.xpath("//input[@jsname='YPqjbf']")).sendKeys("shahpurkhurdu@gmail.com");
         driver.findElement(By.xpath("//span[contains(text(),'Next')]")).click();
@@ -54,8 +54,8 @@ public class Boys6 {
         Thread.sleep(300);
         m.get(1).click();
         Thread.sleep(300);
-        driver.findElement(By.xpath("//input[@aria-labelledby='i23']")).sendKeys("10180401802");
-        driver.findElement(By.xpath("//input[@aria-labelledby='i27']")).sendKeys("UHS SHAHPUR KHURD");
+        driver.findElement(By.xpath("//input[@aria-labelledby='i23']")).sendKeys("10180401801");
+        driver.findElement(By.xpath("//input[@aria-labelledby='i27']")).sendKeys("UMS SHAHPUR KHURD");
         WebElement button = driver.findElement(By.xpath("//label[@for='i35']"));
         js.executeScript("arguments[0].click();", button);
 
@@ -78,7 +78,7 @@ public class Boys6 {
         /*----------------------------------------------------------------*/
         /*ANSWER to the Questions */
 
-        driver.findElement(By.xpath("//span[text()='Both A and B']")).click();   //1
+        driver.findElement(By.xpath("//span[text()='(A) RAM']")).click();   //1
 
         driver.findElement(By.xpath("//span[text()='All of the above']")).click();  //2
 

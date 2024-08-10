@@ -54,8 +54,8 @@ public class Boys7 {
         Thread.sleep(300);
         m.get(1).click();
         Thread.sleep(300);
-        driver.findElement(By.xpath("//input[@aria-labelledby='i23']")).sendKeys("10180401802");
-        driver.findElement(By.xpath("//input[@aria-labelledby='i27']")).sendKeys("UHS SHAHPUR KHURD");
+        driver.findElement(By.xpath("//input[@aria-labelledby='i23']")).sendKeys("10180401801");
+        driver.findElement(By.xpath("//input[@aria-labelledby='i27']")).sendKeys("UMS SHAHPUR KHURD");
         WebElement button = driver.findElement(By.xpath("//label[@for='i35']"));
         js.executeScript("arguments[0].click();", button);
 

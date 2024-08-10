@@ -60,8 +60,8 @@ public class Girls8 {
         Thread.sleep(100);
         m.get(1).click();
         Thread.sleep(100);
-        driver.findElement(By.xpath("//input[@aria-labelledby='i23']")).sendKeys("10180401802");
-        driver.findElement(By.xpath("//input[@aria-labelledby='i27']")).sendKeys("UHS SHAHPUR KHURD");
+        driver.findElement(By.xpath("//input[@aria-labelledby='i23']")).sendKeys("10180401801");
+        driver.findElement(By.xpath("//input[@aria-labelledby='i27']")).sendKeys("UMS SHAHPUR KHURD");
         WebElement button=driver.findElement(By.xpath("//label[@for='i35']"));
         js.executeScript("arguments[0].click();", button);
         driver.findElement(By.xpath("//input[@aria-labelledby='i38']")).sendKeys(rollno);     // roll number

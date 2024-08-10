@@ -77,8 +77,9 @@ public class Boys12 {
 
         /*----------------------------------------------------------------*/
         /*ANSWER to the Questions */
+        String first= "Both A and B";
 
-        driver.findElement(By.xpath("//span[text()='Both A and B']")).click();   //1
+        driver.findElement(By.xpath("//span[text()='j nn b bn ']")).click();   //1
 
         driver.findElement(By.xpath("//span[text()='All of the above']")).click();  //2
 

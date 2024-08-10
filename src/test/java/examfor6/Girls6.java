@@ -43,7 +43,7 @@ public class Girls6 {
     public void verifyLoginWithValidCredentials(String rollno , String name, String fname) throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(900, TimeUnit.SECONDS);
 
-        driver.get("https://forms.gle/mSauseVEGTZ8WCnm8");
+        driver.get("https://forms.gle/S7LkY2N8n86SbQcQA");
 
         driver.findElement(By.xpath("//input[@jsname='YPqjbf']")).sendKeys("shahpurkhurdu@gmail.com");
        driver.findElement(By.xpath("//span[contains(text(),'Next')]")).click();
@@ -60,8 +60,8 @@ public class Girls6 {
         Thread.sleep(100);
         m.get(1).click();
         Thread.sleep(100);
-        driver.findElement(By.xpath("//input[@aria-labelledby='i23']")).sendKeys("10180401802");
-        driver.findElement(By.xpath("//input[@aria-labelledby='i27']")).sendKeys("UHS SHAHPUR KHURD");
+        driver.findElement(By.xpath("//input[@aria-labelledby='i23']")).sendKeys("10180401801");
+        driver.findElement(By.xpath("//input[@aria-labelledby='i27']")).sendKeys("UMS SHAHPUR KHURD");
         WebElement button=driver.findElement(By.xpath("//label[@for='i35']"));
         js.executeScript("arguments[0].click();", button);
         driver.findElement(By.xpath("//input[@aria-labelledby='i38']")).sendKeys(rollno);     // roll number
@@ -103,8 +103,8 @@ public class Girls6 {
         //9
         driver.findElement(By.xpath("//span[text()='Alt + Tab']")).click();//10
 
-        List<WebElement> sub= driver.findElements(By.xpath("//div[@aria-label = 'Submit']"));
-        sub.get(0).click();
+        /*List<WebElement> sub= driver.findElements(By.xpath("//div[@aria-label = 'Submit']"));
+        sub.get(0).click();*/
         driver.navigate().refresh();
 
 
