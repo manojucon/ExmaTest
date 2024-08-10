@@ -5,7 +5,7 @@ import org.testng.annotations.DataProvider;
 public class testdata6boys {
 
     @DataProvider(name = "testData6Boys")
-    public Object[][] testData12(){
+    public Object[][] testData6Boys(){
 
         return new Object[][] {
                 {"1",	"AASUTOOSH KUMAR",	"AJEET KUMAR",          },

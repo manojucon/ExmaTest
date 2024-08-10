@@ -79,7 +79,7 @@ public class Boys12 {
         /*ANSWER to the Questions */
         String first= "Both A and B";
 
-        driver.findElement(By.xpath("//span[text()='j nn b bn ']")).click();   //1
+        driver.findElement(By.xpath("//span[text()='Both A and B']")).click();   //1
 
         driver.findElement(By.xpath("//span[text()='All of the above']")).click();  //2
 
@@ -101,8 +101,8 @@ public class Boys12 {
         //9
         driver.findElement(By.xpath("//span[text()='Special Purpose Keys']")).click();//10
 
-        List<WebElement> sub= driver.findElements(By.xpath("//div[@aria-label = 'Submit']"));
-        sub.get(0).click();
+      /*  List<WebElement> sub= driver.findElements(By.xpath("//div[@aria-label = 'Submit']"));
+        sub.get(0).click();*/
 
         driver.navigate().refresh();
 
