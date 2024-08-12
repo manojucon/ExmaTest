@@ -49,7 +49,7 @@ public class Girls12 {
         WebElement sname=driver.findElement(By.xpath("//input[@aria-labelledby='i1']"));//
         // name
         sname.sendKeys(name);
-        driver.findElement(By.xpath("//span[@class ='aDTYNe snByac OvPDhc OIC90c']")).click();
+        driver.findElement(By.xpath("//span[text()='Female']")).click();
         WebElement fsname=driver.findElement(By.xpath("//input[@aria-labelledby='i15']"));// fathers name
         fsname.sendKeys(fname);
         Thread.sleep(100);
@@ -93,44 +93,44 @@ public class Girls12 {
 
         }*/
 
-        driver.findElement(By.xpath("//span[text()='Microphone']")).click();   //1
+        String first= "Both A and B";
+        driver.findElement(By.xpath("//span[text()='"+first+"']")).click();//1
 
-        driver.findElement(By.xpath("//span[text()='Operating system']")).click();  //2
+        String second= "All of the above";
+        driver.findElement(By.xpath("//span[text()='"+second+"']")).click();
+        //2
+        String third= "Automation";
+        driver.findElement(By.xpath("//span[text()='"+third+"']")).click();      //3
 
-        driver.findElement(By.xpath("//span[text()='10111']")).click();      //3
+        String fourth= "TRUE";
+        List<WebElement> fouropt = driver.findElements(By.xpath("//span[text()='"+fourth+"']"));//4
+        fouropt.get(1).click();
 
-        driver.findElement(By.xpath("//span[text()='2']")).click();//4
+        String fifth= "None of the above";
+        driver.findElement(By.xpath("//span[text()='"+fifth+"']")).click();    //6
 
+        String sixth= "Uninterruptible Power System";
+        driver.findElement(By.xpath("//span[text()='"+sixth+"']")).click();     //7
 
-        driver.findElement(By.xpath("//span[text()='Universal Automatic Computers']")).click();    //5
-
-        driver.findElement(By.xpath("//span[text()='Machine language']")).click();    //6
-
-        driver.findElement(By.xpath("//span[text()='Trobleshooting']")).click();     //7
-
-        driver.findElement(By.xpath("//span[text()='way a computer operator works.']")).click();
+        String seventh= "Computer network";
+        driver.findElement(By.xpath("//span[text()='"+seventh+"']")).click();
+        // Multiple Answer
+        /*List<WebElement> eightopt = driver.findElements(By.xpath("//span[text()='"+seventh+"']"));
+        eightopt.get(1).click();  *///8
         //8
-        //8
-        driver.findElement(By.xpath("//span[text()='Ctrl + X']")).click();
+        String eight= "TRUE";
+        driver.findElement(By.xpath("//span[text()='"+eight+"']")).click();
         //9
-        driver.findElement(By.xpath("//span[text()='Alt + Tab']")).click();//10
+        String ninth= "B. Typing Keys";
+        driver.findElement(By.xpath("//span[text()='"+ninth+"']")).click();//10
+
+        String tenth= "Function Keys";
+        driver.findElement(By.xpath("//span[text()='"+tenth+"']")).click();//10
 
         List<WebElement> sub= driver.findElements(By.xpath("//div[@aria-label = 'Submit']"));
         sub.get(0).click();
+
         driver.navigate().refresh();
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     }
 }

@@ -68,7 +68,7 @@ public class Boys12 {
         drop.get(1).click();
         Thread.sleep(100);
         List<WebElement> dropdown=driver.findElements(By.xpath("//span[text()='VAISHALI']"));
-        Thread.sleep(400);
+        Thread.sleep(600);
         dropdown.get(1).click();
         Thread.sleep(300);
         List<WebElement> next1 = driver.findElements(By.xpath("//div[@jsname='OCpkoe']"));
@@ -78,46 +78,41 @@ public class Boys12 {
         /*----------------------------------------------------------------*/
         /*ANSWER to the Questions */
 
-        driver.findElement(By.xpath("//span[text()='Both A and B']")).click();   //1
+        String first= "Both A and B";
+        driver.findElement(By.xpath("//span[text()='"+first+"']")).click();//1
 
-        driver.findElement(By.xpath("//span[text()='All of the above']")).click();  //2
+        String second= "All of the above";
+        driver.findElement(By.xpath("//span[text()='"+second+"']")).click();
+        //2
+        String third= "Automation";
+        driver.findElement(By.xpath("//span[text()='"+third+"']")).click();      //3
 
-        driver.findElement(By.xpath("//span[text()='Reduction in Paper Work']")).click();      //3
-
-        List<WebElement> fouropt = driver.findElements(By.xpath("//span[text()='TRUE']"));//4
+        String fourth= "TRUE";
+        List<WebElement> fouropt = driver.findElements(By.xpath("//span[text()='"+fourth+"']"));//4
         fouropt.get(1).click();
-       /* Integer x = Integer.valueOf(rollno);
-        if(x>=5 && x<=10){
 
-        }
-        else
-        {
+        String fifth= "None of the above";
+        driver.findElement(By.xpath("//span[text()='"+fifth+"']")).click();    //6
 
-        }
-        if(x>=10 && x<=20){
-             //6
+        String sixth= "Uninterruptible Power System";
+        driver.findElement(By.xpath("//span[text()='"+sixth+"']")).click();     //7
 
-        }
-        else
-        {
-
-        }
-
-
-*/
-
-        driver.findElement(By.xpath("//span[text()='Uninterruptible Power System']")).click();    //6
-
-        driver.findElement(By.xpath("//span[text()='Computer network']")).click();     //7
-
-        List<WebElement> eightopt = driver.findElements(By.xpath("//span[text()='TRUE']"));
-        eightopt.get(1).click();  //8
+        String seventh= "Computer network";
+        driver.findElement(By.xpath("//span[text()='"+seventh+"']")).click();
+       // Multiple Answer
+        /*List<WebElement> eightopt = driver.findElements(By.xpath("//span[text()='"+seventh+"']"));
+        eightopt.get(1).click();  *///8
         //8
-        driver.findElement(By.xpath("//span[text()='B. Typing Keys']")).click();
+        String eight= "TRUE";
+        driver.findElement(By.xpath("//span[text()='"+eight+"']")).click();
         //9
-        driver.findElement(By.xpath("//span[text()='Special Purpose Keys']")).click();//10
+        String ninth= "B. Typing Keys";
+        driver.findElement(By.xpath("//span[text()='"+ninth+"']")).click();//10
 
-      /*  List<WebElement> sub= driver.findElements(By.xpath("//div[@aria-label = 'Submit']"));
+        String tenth= "Function Keys";
+        driver.findElement(By.xpath("//span[text()='"+tenth+"']")).click();//10
+
+        /*List<WebElement> sub= driver.findElements(By.xpath("//div[@aria-label = 'Submit']"));
         sub.get(0).click();*/
 
         driver.navigate().refresh();
