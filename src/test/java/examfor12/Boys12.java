@@ -77,7 +77,6 @@ public class Boys12 {
 
         /*----------------------------------------------------------------*/
         /*ANSWER to the Questions */
-        String first= "Both A and B";
 
         driver.findElement(By.xpath("//span[text()='Both A and B']")).click();   //1
 
@@ -87,8 +86,25 @@ public class Boys12 {
 
         List<WebElement> fouropt = driver.findElements(By.xpath("//span[text()='TRUE']"));//4
         fouropt.get(1).click();
+       /* Integer x = Integer.valueOf(rollno);
+        if(x>=5 && x<=10){
 
-        // driver.findElement(By.xpath("//span[text()='None of the above'][2]")).click();    //5
+        }
+        else
+        {
+
+        }
+        if(x>=10 && x<=20){
+             //6
+
+        }
+        else
+        {
+
+        }
+
+
+*/
 
         driver.findElement(By.xpath("//span[text()='Uninterruptible Power System']")).click();    //6
 

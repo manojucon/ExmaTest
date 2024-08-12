@@ -77,7 +77,22 @@ public class Boys9 {
 
         /*----------------------------------------------------------------*/
         /*ANSWER to the Questions */
+       /* Integer x = Integer.valueOf(rollno);
+        if(x>=5 && x<=10){
 
+        }
+        else
+        {
+
+        }
+        if(x>=10 && x<=20){
+
+        }
+        else
+        {
+
+        }
+*/
         driver.findElement(By.xpath("//span[text()='Both A and B']")).click();   //1
 
         driver.findElement(By.xpath("//span[text()='All of the above']")).click();  //2

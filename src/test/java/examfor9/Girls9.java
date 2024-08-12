@@ -81,6 +81,22 @@ public class Girls9 {
        /*----------------------------------------------------------------*/
         /*ANSWER to the Questions */
 
+       /* Integer x = Integer.valueOf(rollno);
+        if(x>=5 && x<=10){
+
+        }
+        else
+        {
+
+        }
+        if(x>=10 && x<=20){
+
+        }
+        else
+        {
+
+        }*/
+
         driver.findElement(By.xpath("//span[text()='Microphone']")).click();   //1
 
         driver.findElement(By.xpath("//span[text()='Operating system']")).click();  //2
