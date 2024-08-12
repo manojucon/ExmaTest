@@ -1,5 +1,6 @@
 package examfor8;
 
+import baseTest.BaseTest;
 import com.umasuraj.tutorailsninja.automation.testcases.GFG;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -14,7 +15,7 @@ import org.testng.annotations.Test;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class Girls8 {
+public class Girls8 extends BaseTest {
     GFG gf = new GFG();
     public String text;
     List<String> integersFound;
@@ -43,7 +44,7 @@ public class Girls8 {
     public void verifyLoginWithValidCredentials(String rollno , String name, String fname) throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(900, TimeUnit.SECONDS);
 
-        driver.get("https://forms.gle/mSauseVEGTZ8WCnm8");
+        driver.get(p.getProperty("test8"));
 
         driver.findElement(By.xpath("//input[@jsname='YPqjbf']")).sendKeys("shahpurkhurdu@gmail.com");
        driver.findElement(By.xpath("//span[contains(text(),'Next')]")).click();

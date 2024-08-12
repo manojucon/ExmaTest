@@ -10,11 +10,12 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import baseTest.BaseTest;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class Girls10 {
+public class Girls10 extends BaseTest{
     GFG gf = new GFG();
     public String text;
     List<String> integersFound;
@@ -43,7 +44,7 @@ public class Girls10 {
     public void verifyLoginWithValidCredentials(String rollno , String name, String fname) throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(900, TimeUnit.SECONDS);
 
-        driver.get("https://forms.gle/mSauseVEGTZ8WCnm8");
+        driver.get(p.getProperty("test10"));
 
         driver.findElement(By.xpath("//input[@jsname='YPqjbf']")).sendKeys("shahpurkhurdu@gmail.com");
        driver.findElement(By.xpath("//span[contains(text(),'Next')]")).click();

@@ -1,5 +1,6 @@
 package examfor12;
 
+import baseTest.BaseTest;
 import com.umasuraj.tutorailsninja.automation.testcases.GFG;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -10,32 +11,37 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.List;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-public class Boys12 {
+public class Boys12 extends BaseTest {
 
     GFG gf = new GFG();
     public String text;
     List<String> integersFound;
     WebDriver driver;
     JavascriptExecutor js;
+    String url12;
 
     @BeforeClass
-    public void setup(){
+    public void setup() throws IOException {
         ChromeOptions options = new ChromeOptions();
         options.setCapability("browserVersion", "124.0.6367.79");
         System.setProperty("webdriver.gecko.driver", "C:\\Users\\Manoj\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         js = (JavascriptExecutor) driver;
-
         driver.manage().timeouts().implicitlyWait(900, TimeUnit.SECONDS);
+
     }
 
     @Test(priority = 1 , dataProvider="testData12Boys",dataProviderClass=testdata12boys.class)
     public void verifyLoginWithValidCredentials(String rollno , String name, String fname) throws InterruptedException {
-        driver.get("https://forms.gle/W5sjqxjWBxDhAMUj7");
+        driver.get(p.getProperty("test12"));
         Thread.sleep(400);
         driver.findElement(By.xpath("//input[@jsname='YPqjbf']")).sendKeys("shahpurkhurdu@gmail.com");
         driver.findElement(By.xpath("//span[contains(text(),'Next')]")).click();
