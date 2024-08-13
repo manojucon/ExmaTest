@@ -57,29 +57,34 @@ public class Girls7 extends BaseTest {
         WebElement fsname=driver.findElement(By.xpath("//input[@aria-labelledby='i15']"));// fathers name
         fsname.sendKeys(fname);
         Thread.sleep(100);
+        driver.findElement(By.xpath("//div[@jsname= 'd9BH4c']")).click();
+        Thread.sleep(500);
         List<WebElement> m = driver.findElements(By.xpath("//span[text()='BOO']"));
-        Thread.sleep(100);
+        Thread.sleep(300);
         m.get(1).click();
-        Thread.sleep(100);
+        Thread.sleep(300);
         driver.findElement(By.xpath("//input[@aria-labelledby='i23']")).sendKeys("10180401801");
         driver.findElement(By.xpath("//input[@aria-labelledby='i27']")).sendKeys("UMS SHAHPUR KHURD");
-        WebElement button=driver.findElement(By.xpath("//label[@for='i35']"));
+        WebElement button = driver.findElement(By.xpath("//label[@for='i35']"));
         js.executeScript("arguments[0].click();", button);
-        driver.findElement(By.xpath("//input[@aria-labelledby='i38']")).sendKeys(rollno);     // roll number
+
+        // ROLL   NO ROLL     BUM     ROLLL
+        driver.findElement(By.xpath("//input[@aria-labelledby='i38']")).sendKeys(rollno);
+
+        // roll number
         List<WebElement> drop=driver.findElements(By.xpath("//span[text()='Choose']"));
-        Thread.sleep(100);
+        Thread.sleep(500);
         drop.get(1).click();
-        Thread.sleep(100);
+        Thread.sleep(300);
         List<WebElement> dropdown=driver.findElements(By.xpath("//span[text()='VAISHALI']"));
-        Thread.sleep(100);
+        Thread.sleep(400);
         dropdown.get(1).click();
-        Thread.sleep(100);
+        Thread.sleep(300);
         List<WebElement> next1 = driver.findElements(By.xpath("//div[@jsname='OCpkoe']"));
-        Thread.sleep(100);
-       next1.get(0).click();
+        Thread.sleep(200);
+        next1.get(0).click();
 
-
-       /*----------------------------------------------------------------*/
+        /*----------------------------------------------------------------*/
         /*ANSWER to the Questions */
 
         String first= "Both A and B";

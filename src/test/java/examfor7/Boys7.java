@@ -50,7 +50,7 @@ public class Boys7 extends BaseTest {
         WebElement fsname=driver.findElement(By.xpath("//input[@aria-labelledby='i15']"));// fathers name
         fsname.sendKeys(fname);
         driver.findElement(By.xpath("//div[@jsname= 'd9BH4c']")).click();
-        Thread.sleep(300);
+        Thread.sleep(500);
         List<WebElement> m = driver.findElements(By.xpath("//span[text()='BOO']"));
         Thread.sleep(300);
         m.get(1).click();
@@ -65,9 +65,9 @@ public class Boys7 extends BaseTest {
 
         // roll number
         List<WebElement> drop=driver.findElements(By.xpath("//span[text()='Choose']"));
-        Thread.sleep(100);
+        Thread.sleep(500);
         drop.get(1).click();
-        Thread.sleep(100);
+        Thread.sleep(300);
         List<WebElement> dropdown=driver.findElements(By.xpath("//span[text()='VAISHALI']"));
         Thread.sleep(400);
         dropdown.get(1).click();

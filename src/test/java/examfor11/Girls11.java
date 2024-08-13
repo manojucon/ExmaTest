@@ -56,82 +56,74 @@ public class Girls11 extends BaseTest{
         driver.findElement(By.xpath("//span[text()='Female']")).click();
         WebElement fsname=driver.findElement(By.xpath("//input[@aria-labelledby='i15']"));// fathers name
         fsname.sendKeys(fname);
-        Thread.sleep(100);
+        driver.findElement(By.xpath("//div[@jsname= 'd9BH4c']")).click();
+        Thread.sleep(500);
         List<WebElement> m = driver.findElements(By.xpath("//span[text()='BOO']"));
-        Thread.sleep(100);
+        Thread.sleep(300);
         m.get(1).click();
-        Thread.sleep(100);
+        Thread.sleep(300);
         driver.findElement(By.xpath("//input[@aria-labelledby='i23']")).sendKeys("10180401802");
         driver.findElement(By.xpath("//input[@aria-labelledby='i27']")).sendKeys("UHS SHAHPUR KHURD");
-        WebElement button=driver.findElement(By.xpath("//label[@for='i35']"));
+        WebElement button = driver.findElement(By.xpath("//label[@for='i35']"));
         js.executeScript("arguments[0].click();", button);
-        driver.findElement(By.xpath("//input[@aria-labelledby='i38']")).sendKeys(rollno);     // roll number
+
+        // ROLL   NO ROLL     BUM     ROLLL
+        driver.findElement(By.xpath("//input[@aria-labelledby='i38']")).sendKeys(rollno);
+
+        // roll number
         List<WebElement> drop=driver.findElements(By.xpath("//span[text()='Choose']"));
-        Thread.sleep(100);
+        Thread.sleep(500);
         drop.get(1).click();
-        Thread.sleep(100);
+        Thread.sleep(300);
         List<WebElement> dropdown=driver.findElements(By.xpath("//span[text()='VAISHALI']"));
-        Thread.sleep(100);
+        Thread.sleep(400);
         dropdown.get(1).click();
-        Thread.sleep(100);
+        Thread.sleep(300);
         List<WebElement> next1 = driver.findElements(By.xpath("//div[@jsname='OCpkoe']"));
-        Thread.sleep(100);
-       next1.get(0).click();
+        Thread.sleep(200);
+        next1.get(0).click();
 
 
-       /*----------------------------------------------------------------*/
+        /*----------------------------------------------------------------*/
         /*ANSWER to the Questions */
 
-        String first= "Both A and B";
+        String first= "Windows";
         driver.findElement(By.xpath("//span[text()='"+first+"']")).click();//1
 
-        String second= "All of the above";
+        String second= "cal";
         driver.findElement(By.xpath("//span[text()='"+second+"']")).click();
         //2
-        String third= "Automation";
+        String third= "Network Interface Card";
         driver.findElement(By.xpath("//span[text()='"+third+"']")).click();      //3
 
-        String fourth= "TRUE";
-        List<WebElement> fouropt = driver.findElements(By.xpath("//span[text()='"+fourth+"']"));//4
-        fouropt.get(1).click();
+        String fourth= "Yes";
+        driver.findElement(By.xpath("//span[text()='"+fourth+"']")).click();;//4
 
-        String fifth= "None of the above";
+        String fifth= "cd";
         driver.findElement(By.xpath("//span[text()='"+fifth+"']")).click();    //6
 
-        String sixth= "Uninterruptible Power System";
+        String sixth= "Input/Output Subsystem";
         driver.findElement(By.xpath("//span[text()='"+sixth+"']")).click();     //7
 
-        String seventh= "Computer network";
+        String seventh= "CPU";
         driver.findElement(By.xpath("//span[text()='"+seventh+"']")).click();
         // Multiple Answer
         /*List<WebElement> eightopt = driver.findElements(By.xpath("//span[text()='"+seventh+"']"));
         eightopt.get(1).click();  *///8
         //8
-        String eight= "TRUE";
+        String eight= "ROM";
         driver.findElement(By.xpath("//span[text()='"+eight+"']")).click();
         //9
-        String ninth= "B. Typing Keys";
+        String ninth= "VDU";
         driver.findElement(By.xpath("//span[text()='"+ninth+"']")).click();//10
 
-        String tenth= "Function Keys";
+        String tenth= "Soft copy";
         driver.findElement(By.xpath("//span[text()='"+tenth+"']")).click();//10
 
         List<WebElement> sub= driver.findElements(By.xpath("//div[@aria-label = 'Submit']"));
         sub.get(0).click();
+
         driver.navigate().refresh();
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     }
 }

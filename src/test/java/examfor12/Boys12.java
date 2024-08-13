@@ -97,7 +97,7 @@ public class Boys12 extends BaseTest {
         List<WebElement> fouropt = driver.findElements(By.xpath("//span[text()='"+fourth+"']"));//4
         fouropt.get(1).click();
 
-        String fifth= "None of the above";
+        String fifth= "Generates the output";
         driver.findElement(By.xpath("//span[text()='"+fifth+"']")).click();    //6
 
         String sixth= "Uninterruptible Power System";
@@ -115,11 +115,15 @@ public class Boys12 extends BaseTest {
         String ninth= "B. Typing Keys";
         driver.findElement(By.xpath("//span[text()='"+ninth+"']")).click();//10
 
-        String tenth= "Function Keys";
-        driver.findElement(By.xpath("//span[text()='"+tenth+"']")).click();//10
+       /* String tenth= "Function Keys";
+        driver.findElement(By.xpath("//span[text()='"+tenth+"']")).click();*///10
 
-        /*List<WebElement> sub= driver.findElements(By.xpath("//div[@aria-label = 'Submit']"));
-        sub.get(0).click();*/
+        String tenth= "Special Purpose Keys";
+        List<WebElement> tenthopt = driver.findElements(By.xpath("//span[text()='"+tenth+"']"));
+        tenthopt.get(0).click();
+
+        List<WebElement> sub= driver.findElements(By.xpath("//div[@aria-label = 'Submit']"));
+        sub.get(0).click();
 
         driver.navigate().refresh();
 

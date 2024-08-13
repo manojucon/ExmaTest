@@ -18,8 +18,8 @@ public class testdata11boys {
                 {"8","ASHFAQUE AHMAD","MDSAMIM AHMAD"},
                 {"9","DEVRAJ KUMAR","RANJEETSAH"},
                 {"10","INZAMAMULHAQUE","ABDURRAHIM"},
-                {"11","MANISH KUMAR","JITENDRA RAY"},{"12","MD.SANAULLAH","MD.KAMRE ALAM"},
-                {"13","MD.SOHEL","MD MUNNA"},
+                {"11","MANISH KUMAR","JITENDRA RAY"},{"12","MD SANAULLAH","MD KAMRE ALAM"},
+                {"13","MD SOHEL","MD MUNNA"},
                 {"14","MINNAT ALI","TAUQIR ALAM"},
                 {"15","MOHAMMAD IMTEYAJ","MOHAMMAD IRSHAD"}
                 ,{"16","MOHAMMAD JAHID","MDMOFI DALAM"},
