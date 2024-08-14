@@ -37,8 +37,8 @@ public class BaseTest {
         url10=p.getProperty("test10");
         url9=p.getProperty("test9");
         url8=p.getProperty("test8");
-        url8=p.getProperty("test7");
-        url8=p.getProperty("test6");
+        url7=p.getProperty("test7");
+        url6=p.getProperty("test6");
 
     }
 }
