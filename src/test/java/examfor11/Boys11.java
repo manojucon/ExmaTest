@@ -1,5 +1,7 @@
 package examfor11;
 
+import baseTest.AnswerTest;
+import baseTest.BaseTest;
 import com.umasuraj.tutorailsninja.automation.testcases.GFG;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -13,13 +15,14 @@ import org.testng.annotations.Test;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class Boys11 {
+public class Boys11 extends BaseTest {
 
     GFG gf = new GFG();
     public String text;
     List<String> integersFound;
     WebDriver driver;
     JavascriptExecutor js;
+    AnswerTest test11;
 
     @BeforeClass
     public void setup(){
@@ -31,11 +34,13 @@ public class Boys11 {
         js = (JavascriptExecutor) driver;
 
         driver.manage().timeouts().implicitlyWait(900, TimeUnit.SECONDS);
+        test11 = new AnswerTest();
+        test11.propertiesSetup();
     }
 
     @Test(priority = 1 , dataProvider="testData11Boys",dataProviderClass= testdata11boys.class)
     public void verifyLoginWithValidCredentials(String rollno , String name, String fname) throws InterruptedException {
-        driver.get("https://forms.gle/W5sjqxjWBxDhAMUj7");
+        driver.get(p.getProperty("test11"));
         Thread.sleep(400);
         driver.findElement(By.xpath("//input[@jsname='YPqjbf']")).sendKeys("shahpurkhurdu@gmail.com");
         driver.findElement(By.xpath("//span[contains(text(),'Next')]")).click();
@@ -49,7 +54,7 @@ public class Boys11 {
         WebElement fsname=driver.findElement(By.xpath("//input[@aria-labelledby='i15']"));// fathers name
         fsname.sendKeys(fname);
         driver.findElement(By.xpath("//div[@jsname= 'd9BH4c']")).click();
-        Thread.sleep(300);
+        Thread.sleep(500);
         List<WebElement> m = driver.findElements(By.xpath("//span[text()='BOO']"));
         Thread.sleep(300);
         m.get(1).click();
@@ -64,9 +69,9 @@ public class Boys11 {
 
         // roll number
         List<WebElement> drop=driver.findElements(By.xpath("//span[text()='Choose']"));
-        Thread.sleep(100);
+        Thread.sleep(500);
         drop.get(1).click();
-        Thread.sleep(100);
+        Thread.sleep(300);
         List<WebElement> dropdown=driver.findElements(By.xpath("//span[text()='VAISHALI']"));
         Thread.sleep(400);
         dropdown.get(1).click();
@@ -94,27 +99,38 @@ public class Boys11 {
 
         }
 */
-        driver.findElement(By.xpath("//span[text()='Both A and B']")).click();   //1
+        String first= test11.answerProperty12.getProperty("1");
+        driver.findElement(By.xpath("//span[text()='"+first+"']")).click();//1
 
-        driver.findElement(By.xpath("//span[text()='All of the above']")).click();  //2
+        String second= test11.answerProperty12.getProperty("2");
+        driver.findElement(By.xpath("//span[text()='"+second+"']")).click();
+        //2
+        String third= test11.answerProperty12.getProperty("3");
+        driver.findElement(By.xpath("//span[text()='"+third+"']")).click();      //3
 
-        driver.findElement(By.xpath("//span[text()='Reduction in Paper Work']")).click();      //3
+        String fourth= test11.answerProperty12.getProperty("4");
+        driver.findElement(By.xpath("//span[text()='"+fourth+"']")).click();;//4
 
-        List<WebElement> fouropt = driver.findElements(By.xpath("//span[text()='TRUE']"));//4
-        fouropt.get(1).click();
+        String fifth= test11.answerProperty12.getProperty("5");
+        driver.findElement(By.xpath("//span[text()='"+fifth+"']")).click();    //6
 
-        // driver.findElement(By.xpath("//span[text()='None of the above'][2]")).click();    //5
+        String sixth= test11.answerProperty12.getProperty("6");
+        driver.findElement(By.xpath("//span[text()='"+sixth+"']")).click();     //7
 
-        driver.findElement(By.xpath("//span[text()='Uninterruptible Power System']")).click();    //6
-
-        driver.findElement(By.xpath("//span[text()='Computer network']")).click();     //7
-
-        List<WebElement> eightopt = driver.findElements(By.xpath("//span[text()='TRUE']"));
-        eightopt.get(1).click();  //8
+        String seventh= test11.answerProperty12.getProperty("7");
+        driver.findElement(By.xpath("//span[text()='"+seventh+"']")).click();
+        // Multiple Answer
+        /*List<WebElement> eightopt = driver.findElements(By.xpath("//span[text()='"+seventh+"']"));
+        eightopt.get(1).click();  *///8
         //8
-        driver.findElement(By.xpath("//span[text()='B. Typing Keys']")).click();
+        String eight= test11.answerProperty12.getProperty("8");
+        driver.findElement(By.xpath("//span[text()='"+eight+"']")).click();
         //9
-        driver.findElement(By.xpath("//span[text()='Special Purpose Keys']")).click();//10
+        String ninth= test11.answerProperty12.getProperty("9");
+        driver.findElement(By.xpath("//span[text()='"+ninth+"']")).click();//10
+
+        String tenth= test11.answerProperty12.getProperty("10");
+        driver.findElement(By.xpath("//span[text()='"+tenth+"']")).click();//10
 
         List<WebElement> sub= driver.findElements(By.xpath("//div[@aria-label = 'Submit']"));
         sub.get(0).click();

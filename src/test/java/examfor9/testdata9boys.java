@@ -18,7 +18,7 @@ public class testdata9boys {
                 {"8",	"MD FAIJE",			"MD SAMSHUL HAQUE",              },
                 {"9",	"MD MOIM",			"MD MOHID",                      },
                 {"10",	"MD NASRUDDIN",			"MD ALIFJAN",                },
-                {"11",	"MD.ARMAN ANSARI",			"MD JAMIL ANSARI",       },
+                {"11",	"MD ARMAN ANSARI",			"MD JAMIL ANSARI",       },
                 {"12",	"MOHAMMAD ARWAZ ANSARI",			"MOHAMMAD ASLAM",},
                 {"13",	"MOHAMMAD ASHIF",			"MOHAMMAD SHAUKAT",      },
                 {"14",	"MOHAMMAD MUSHTAMIL",			"FAIYAZ ALAM",       },

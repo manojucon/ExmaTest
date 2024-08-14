@@ -1,5 +1,7 @@
 package examfor12;
 
+import baseTest.AnswerTest;
+import baseTest.BaseTest;
 import com.umasuraj.tutorailsninja.automation.testcases.GFG;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -10,32 +12,41 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.List;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-public class Boys12 {
+public class Boys12 extends BaseTest  {
 
     GFG gf = new GFG();
     public String text;
     List<String> integersFound;
     WebDriver driver;
     JavascriptExecutor js;
+    String url12;
+    AnswerTest test12;
 
     @BeforeClass
-    public void setup(){
+    public void setup() throws IOException {
         ChromeOptions options = new ChromeOptions();
         options.setCapability("browserVersion", "124.0.6367.79");
         System.setProperty("webdriver.gecko.driver", "C:\\Users\\Manoj\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         js = (JavascriptExecutor) driver;
-
         driver.manage().timeouts().implicitlyWait(900, TimeUnit.SECONDS);
+        test12 = new AnswerTest();
+        test12.propertiesSetup();
+
     }
 
     @Test(priority = 1 , dataProvider="testData12Boys",dataProviderClass=testdata12boys.class)
     public void verifyLoginWithValidCredentials(String rollno , String name, String fname) throws InterruptedException {
-        driver.get("https://forms.gle/W5sjqxjWBxDhAMUj7");
+
+        driver.get(p.getProperty("test12"));
         Thread.sleep(400);
         driver.findElement(By.xpath("//input[@jsname='YPqjbf']")).sendKeys("shahpurkhurdu@gmail.com");
         driver.findElement(By.xpath("//span[contains(text(),'Next')]")).click();
@@ -68,7 +79,7 @@ public class Boys12 {
         drop.get(1).click();
         Thread.sleep(100);
         List<WebElement> dropdown=driver.findElements(By.xpath("//span[text()='VAISHALI']"));
-        Thread.sleep(400);
+        Thread.sleep(600);
         dropdown.get(1).click();
         Thread.sleep(300);
         List<WebElement> next1 = driver.findElements(By.xpath("//div[@jsname='OCpkoe']"));
@@ -78,47 +89,46 @@ public class Boys12 {
         /*----------------------------------------------------------------*/
         /*ANSWER to the Questions */
 
-        driver.findElement(By.xpath("//span[text()='Both A and B']")).click();   //1
+        String first= test12.answerProperty12.getProperty("1");
+        driver.findElement(By.xpath("//span[text()='"+first+"']")).click();//1
 
-        driver.findElement(By.xpath("//span[text()='All of the above']")).click();  //2
+        String second= test12.answerProperty12.getProperty("2");
+        driver.findElement(By.xpath("//span[text()='"+second+"']")).click();
+        //2
+        String third= test12.answerProperty12.getProperty("3");
+        driver.findElement(By.xpath("//span[text()='"+third+"']")).click();      //3
 
-        driver.findElement(By.xpath("//span[text()='Reduction in Paper Work']")).click();      //3
-
-        List<WebElement> fouropt = driver.findElements(By.xpath("//span[text()='TRUE']"));//4
+        String fourth= test12.answerProperty12.getProperty("4");
+        List<WebElement> fouropt = driver.findElements(By.xpath("//span[text()='"+fourth+"']"));//4
         fouropt.get(1).click();
-       /* Integer x = Integer.valueOf(rollno);
-        if(x>=5 && x<=10){
 
-        }
-        else
-        {
+        String fifth= test12.answerProperty12.getProperty("5");
+        driver.findElement(By.xpath("//span[text()='"+fifth+"']")).click();    //6
 
-        }
-        if(x>=10 && x<=20){
-             //6
+        String sixth= test12.answerProperty12.getProperty("6");
+        driver.findElement(By.xpath("//span[text()='"+sixth+"']")).click();     //7
 
-        }
-        else
-        {
-
-        }
-
-
-*/
-
-        driver.findElement(By.xpath("//span[text()='Uninterruptible Power System']")).click();    //6
-
-        driver.findElement(By.xpath("//span[text()='Computer network']")).click();     //7
-
-        List<WebElement> eightopt = driver.findElements(By.xpath("//span[text()='TRUE']"));
-        eightopt.get(1).click();  //8
+        String seventh= test12.answerProperty12.getProperty("7");
+        driver.findElement(By.xpath("//span[text()='"+seventh+"']")).click();
+       // Multiple Answer
+        /*List<WebElement> eightopt = driver.findElements(By.xpath("//span[text()='"+seventh+"']"));
+        eightopt.get(1).click();  *///8
         //8
-        driver.findElement(By.xpath("//span[text()='B. Typing Keys']")).click();
+        String eight= test12.answerProperty12.getProperty("8");
+        driver.findElement(By.xpath("//span[text()='"+eight+"']")).click();
         //9
-        driver.findElement(By.xpath("//span[text()='Special Purpose Keys']")).click();//10
+        String ninth= test12.answerProperty12.getProperty("9");
+        driver.findElement(By.xpath("//span[text()='"+ninth+"']")).click();//10
 
-      /*  List<WebElement> sub= driver.findElements(By.xpath("//div[@aria-label = 'Submit']"));
-        sub.get(0).click();*/
+       /* String tenth= "Function Keys";
+        driver.findElement(By.xpath("//span[text()='"+tenth+"']")).click();*///10
+
+        String tenth= test12.answerProperty12.getProperty("10");
+        List<WebElement> tenthopt = driver.findElements(By.xpath("//span[text()='"+tenth+"']"));
+        tenthopt.get(0).click();
+
+        List<WebElement> sub= driver.findElements(By.xpath("//div[@aria-label = 'Submit']"));
+        sub.get(0).click();
 
         driver.navigate().refresh();
 
