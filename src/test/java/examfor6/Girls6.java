@@ -101,8 +101,7 @@ public class Girls6 extends BaseTest {
         driver.findElement(By.xpath("//span[text()='"+third+"']")).click();      //3
 
         String fourth= test6.answerProperty6.getProperty("4");
-        List<WebElement> fouropt = driver.findElements(By.xpath("//span[text()='"+fourth+"']"));//4
-        fouropt.get(1).click();
+        driver.findElement(By.xpath("//span[text()='"+fourth+"']")).click();
 
         String fifth= test6.answerProperty6.getProperty("5");
         driver.findElement(By.xpath("//span[text()='"+fifth+"']")).click();    //6
@@ -129,8 +128,8 @@ public class Girls6 extends BaseTest {
         List<WebElement> tenthopt = driver.findElements(By.xpath("//span[text()='"+tenth+"']"));
         tenthopt.get(0).click();
 
-        List<WebElement> sub= driver.findElements(By.xpath("//div[@aria-label = 'Submit']"));
-        sub.get(0).click();
+      /*  List<WebElement> sub= driver.findElements(By.xpath("//div[@aria-label = 'Submit']"));
+        sub.get(0).click();*/
 
         driver.navigate().refresh();
 
