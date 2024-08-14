@@ -1,5 +1,6 @@
 package examfor11;
 
+import baseTest.AnswerTest;
 import com.umasuraj.tutorailsninja.automation.testcases.GFG;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -21,6 +22,7 @@ public class Girls11 extends BaseTest{
     List<String> integersFound;
     WebDriver driver;
     JavascriptExecutor js ;
+    AnswerTest test11;
 
     @BeforeClass
     public void setup(){
@@ -32,6 +34,8 @@ public class Girls11 extends BaseTest{
         js = (JavascriptExecutor) driver;
 
         driver.manage().timeouts().implicitlyWait(900, TimeUnit.SECONDS);
+        test11 = new AnswerTest();
+        test11.propertiesSetup();
     }
 
     @AfterClass
@@ -87,44 +91,43 @@ public class Girls11 extends BaseTest{
         /*----------------------------------------------------------------*/
         /*ANSWER to the Questions */
 
-        String first= "Windows";
+        String first= test11.answerProperty12.getProperty("1");
         driver.findElement(By.xpath("//span[text()='"+first+"']")).click();//1
 
-        String second= "cal";
+        String second= test11.answerProperty12.getProperty("2");
         driver.findElement(By.xpath("//span[text()='"+second+"']")).click();
         //2
-        String third= "Network Interface Card";
+        String third= test11.answerProperty12.getProperty("3");
         driver.findElement(By.xpath("//span[text()='"+third+"']")).click();      //3
 
-        String fourth= "Yes";
+        String fourth= test11.answerProperty12.getProperty("4");
         driver.findElement(By.xpath("//span[text()='"+fourth+"']")).click();;//4
 
-        String fifth= "cd";
+        String fifth= test11.answerProperty12.getProperty("5");
         driver.findElement(By.xpath("//span[text()='"+fifth+"']")).click();    //6
 
-        String sixth= "Input/Output Subsystem";
+        String sixth= test11.answerProperty12.getProperty("6");
         driver.findElement(By.xpath("//span[text()='"+sixth+"']")).click();     //7
 
-        String seventh= "CPU";
+        String seventh= test11.answerProperty12.getProperty("7");
         driver.findElement(By.xpath("//span[text()='"+seventh+"']")).click();
         // Multiple Answer
         /*List<WebElement> eightopt = driver.findElements(By.xpath("//span[text()='"+seventh+"']"));
         eightopt.get(1).click();  *///8
         //8
-        String eight= "ROM";
+        String eight= test11.answerProperty12.getProperty("8");
         driver.findElement(By.xpath("//span[text()='"+eight+"']")).click();
         //9
-        String ninth= "VDU";
+        String ninth= test11.answerProperty12.getProperty("9");
         driver.findElement(By.xpath("//span[text()='"+ninth+"']")).click();//10
 
-        String tenth= "Soft copy";
+        String tenth= test11.answerProperty12.getProperty("10");
         driver.findElement(By.xpath("//span[text()='"+tenth+"']")).click();//10
 
         List<WebElement> sub= driver.findElements(By.xpath("//div[@aria-label = 'Submit']"));
         sub.get(0).click();
 
         driver.navigate().refresh();
-
     }
 }
 

@@ -1,5 +1,6 @@
 package examfor7;
 
+import baseTest.AnswerTest;
 import baseTest.BaseTest;
 import com.umasuraj.tutorailsninja.automation.testcases.GFG;
 import org.openqa.selenium.By;
@@ -21,6 +22,7 @@ public class Boys7 extends BaseTest {
     List<String> integersFound;
     WebDriver driver;
     JavascriptExecutor js;
+    AnswerTest test7;
 
     @BeforeClass
     public void setup(){
@@ -32,6 +34,8 @@ public class Boys7 extends BaseTest {
         js = (JavascriptExecutor) driver;
 
         driver.manage().timeouts().implicitlyWait(900, TimeUnit.SECONDS);
+        test7 = new AnswerTest();
+        test7.propertiesSetup();
     }
 
     @Test(priority = 1 , dataProvider="testData7Boys",dataProviderClass= testdata7boys.class)
@@ -79,38 +83,43 @@ public class Boys7 extends BaseTest {
         /*----------------------------------------------------------------*/
         /*ANSWER to the Questions */
 
-        String first= "(A) Solid State Drive";
+        String first= test7.answerProperty7.getProperty("1");
         driver.findElement(By.xpath("//span[text()='"+first+"']")).click();//1
 
-        String second= "(A) To encrypt data during transmission";
+        String second= test7.answerProperty7.getProperty("2");
         driver.findElement(By.xpath("//span[text()='"+second+"']")).click();
         //2
-        String third= "(D) HTTPS";
+        String third= test7.answerProperty7.getProperty("3");
         driver.findElement(By.xpath("//span[text()='"+third+"']")).click();      //3
 
-        String fourth= "(B) To manage hardware and software resources";
-        driver.findElement(By.xpath("//span[text()='"+fourth+"']")).click();
+        String fourth= test7.answerProperty7.getProperty("4");
+        List<WebElement> fouropt = driver.findElements(By.xpath("//span[text()='"+fourth+"']"));//4
+        fouropt.get(1).click();
 
-        String fifth= "(C) HTML";
+        String fifth= test7.answerProperty7.getProperty("5");
         driver.findElement(By.xpath("//span[text()='"+fifth+"']")).click();    //6
 
-        String sixth= "(D) BIOS";
+        String sixth= test7.answerProperty7.getProperty("6");
         driver.findElement(By.xpath("//span[text()='"+sixth+"']")).click();     //7
 
-        String seventh= "(A) Hard disk drive (HDD)";
+        String seventh= test7.answerProperty7.getProperty("7");
         driver.findElement(By.xpath("//span[text()='"+seventh+"']")).click();
         // Multiple Answer
         /*List<WebElement> eightopt = driver.findElements(By.xpath("//span[text()='"+seventh+"']"));
         eightopt.get(1).click();  *///8
         //8
-        String eight= "(B) Scanner";
+        String eight= test7.answerProperty7.getProperty("8");
         driver.findElement(By.xpath("//span[text()='"+eight+"']")).click();
         //9
-        String ninth= "(D) Switch";
+        String ninth= test7.answerProperty7.getProperty("9");
         driver.findElement(By.xpath("//span[text()='"+ninth+"']")).click();//10
 
-        String tenth= "(A) Graphical User Interface";
-        driver.findElement(By.xpath("//span[text()='"+tenth+"']")).click();//10
+       /* String tenth= "Function Keys";
+        driver.findElement(By.xpath("//span[text()='"+tenth+"']")).click();*///10
+
+        String tenth= test7.answerProperty7.getProperty("10");
+        List<WebElement> tenthopt = driver.findElements(By.xpath("//span[text()='"+tenth+"']"));
+        tenthopt.get(0).click();
 
         List<WebElement> sub= driver.findElements(By.xpath("//div[@aria-label = 'Submit']"));
         sub.get(0).click();
@@ -119,4 +128,3 @@ public class Boys7 extends BaseTest {
 
     }
 }
-
