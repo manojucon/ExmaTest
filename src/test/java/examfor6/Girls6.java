@@ -87,46 +87,43 @@ public class Girls6 extends BaseTest {
         /*----------------------------------------------------------------*/
         /*ANSWER to the Questions */
 
-        String first= "Both A and B";
+        String first= "(A) RAM";
         driver.findElement(By.xpath("//span[text()='"+first+"']")).click();//1
 
-        String second= "All of the above";
+        String second= "(B) Switch";
         driver.findElement(By.xpath("//span[text()='"+second+"']")).click();
         //2
-        String third= "Automation";
+        String third= "(A) To increase the processing speed of the CPU";
         driver.findElement(By.xpath("//span[text()='"+third+"']")).click();      //3
 
-        String fourth= "TRUE";
-        List<WebElement> fouropt = driver.findElements(By.xpath("//span[text()='"+fourth+"']"));//4
-        fouropt.get(1).click();
+        String fourth= "(A) To convert high-level language to machine code";
+        driver.findElement(By.xpath("//span[text()='"+fourth+"']")).click();
 
-        String fifth= "None of the above";
+        String fifth= "(B) Database management software";
         driver.findElement(By.xpath("//span[text()='"+fifth+"']")).click();    //6
 
-        String sixth= "Uninterruptible Power System";
+        String sixth= "(C) Windows 10";
         driver.findElement(By.xpath("//span[text()='"+sixth+"']")).click();     //7
 
-        String seventh= "Computer network";
+        String seventh= "(A) Hypertext Transfer Protocol";
         driver.findElement(By.xpath("//span[text()='"+seventh+"']")).click();
         // Multiple Answer
         /*List<WebElement> eightopt = driver.findElements(By.xpath("//span[text()='"+seventh+"']"));
         eightopt.get(1).click();  *///8
         //8
-        String eight= "TRUE";
+        String eight= "(A) To permanently store data";
         driver.findElement(By.xpath("//span[text()='"+eight+"']")).click();
         //9
-        String ninth= "B. Typing Keys";
+        String ninth= "(A) Java";
         driver.findElement(By.xpath("//span[text()='"+ninth+"']")).click();//10
 
-        String tenth= "Function Keys";
+        String tenth= "(A) To hide IP addresses";
         driver.findElement(By.xpath("//span[text()='"+tenth+"']")).click();//10
 
         List<WebElement> sub= driver.findElements(By.xpath("//div[@aria-label = 'Submit']"));
         sub.get(0).click();
+
         driver.navigate().refresh();
-
-
-
 
 
 

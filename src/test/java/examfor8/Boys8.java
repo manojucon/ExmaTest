@@ -95,45 +95,43 @@ public class Boys8 extends BaseTest {
 
         }
 */
-        String first= "Both A and B";
+        String first= "(A) Bluetooth";
         driver.findElement(By.xpath("//span[text()='"+first+"']")).click();//1
 
-        String second= "All of the above";
+        String second= "(A) System software";
         driver.findElement(By.xpath("//span[text()='"+second+"']")).click();
         //2
-        String third= "Automation";
+        String third= "(B) To connect computers to the internet";
         driver.findElement(By.xpath("//span[text()='"+third+"']")).click();      //3
 
-        String fourth= "TRUE";
-        List<WebElement> fouropt = driver.findElements(By.xpath("//span[text()='"+fourth+"']"));//4
-        fouropt.get(1).click();
+        String fourth= "(D) To uniquely identify a device on a network";
+        driver.findElement(By.xpath("//span[text()='"+fourth+"']")).click();
 
-        String fifth= "None of the above";
+        String fifth= "(A) To convert digital data to analog signals";
         driver.findElement(By.xpath("//span[text()='"+fifth+"']")).click();    //6
 
-        String sixth= "Uninterruptible Power System";
+        String sixth= "(C) Google Drive";
         driver.findElement(By.xpath("//span[text()='"+sixth+"']")).click();     //7
 
-        String seventh= "Computer network";
+        String seventh= "(C) Hard disk drive (HDD)";
         driver.findElement(By.xpath("//span[text()='"+seventh+"']")).click();
         // Multiple Answer
         /*List<WebElement> eightopt = driver.findElements(By.xpath("//span[text()='"+seventh+"']"));
         eightopt.get(1).click();  *///8
         //8
-        String eight= "TRUE";
+        String eight= "(B) Java";
         driver.findElement(By.xpath("//span[text()='"+eight+"']")).click();
         //9
-        String ninth= "B. Typing Keys";
+        String ninth= "(C) Word processing software";
         driver.findElement(By.xpath("//span[text()='"+ninth+"']")).click();//10
 
-        String tenth= "Function Keys";
+        String tenth= "(C) To protect against unauthorized access and malware";
         driver.findElement(By.xpath("//span[text()='"+tenth+"']")).click();//10
 
         List<WebElement> sub= driver.findElements(By.xpath("//div[@aria-label = 'Submit']"));
         sub.get(0).click();
 
         driver.navigate().refresh();
-
     }
 }
 

@@ -102,57 +102,51 @@ public class Girls9 extends BaseTest {
 
         }*/
 
-        String first= "Both A and B";
+        String first= "BIOS";
         driver.findElement(By.xpath("//span[text()='"+first+"']")).click();//1
 
-        String second= "All of the above";
+        String second= "Dots per inch";
         driver.findElement(By.xpath("//span[text()='"+second+"']")).click();
         //2
-        String third= "Automation";
+        String third= "Optical Mark Reader";
         driver.findElement(By.xpath("//span[text()='"+third+"']")).click();      //3
 
-        String fourth= "TRUE";
-        List<WebElement> fouropt = driver.findElements(By.xpath("//span[text()='"+fourth+"']"));//4
-        fouropt.get(1).click();
+        String fourth= "PARAM";
+        driver.findElement(By.xpath("//span[text()='"+fourth+"']")).click();
 
-        String fifth= "None of the above";
+        String fifth= "Address of the next instructions to be executed";
         driver.findElement(By.xpath("//span[text()='"+fifth+"']")).click();    //6
 
-        String sixth= "Uninterruptible Power System";
+        String sixth= "integrated circuit";
         driver.findElement(By.xpath("//span[text()='"+sixth+"']")).click();     //7
 
-        String seventh= "Computer network";
+        String seventh= "Decode";
         driver.findElement(By.xpath("//span[text()='"+seventh+"']")).click();
         // Multiple Answer
         /*List<WebElement> eightopt = driver.findElements(By.xpath("//span[text()='"+seventh+"']"));
         eightopt.get(1).click();  *///8
         //8
-        String eight= "TRUE";
+        String eight= "Write programs";
         driver.findElement(By.xpath("//span[text()='"+eight+"']")).click();
         //9
-        String ninth= "B. Typing Keys";
+        String ninth= "input devices";
         driver.findElement(By.xpath("//span[text()='"+ninth+"']")).click();//10
 
-        String tenth= "Function Keys";
-        driver.findElement(By.xpath("//span[text()='"+tenth+"']")).click();//10
+        String tenth= "Debug";
+        driver.findElement(By.xpath("//span[text()='"+tenth+"']")).click();//1010
 
         List<WebElement> sub= driver.findElements(By.xpath("//div[@aria-label = 'Submit']"));
         sub.get(0).click();
+
         driver.navigate().refresh();
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     }
 }
+
+
+
+
+
+
+
 
