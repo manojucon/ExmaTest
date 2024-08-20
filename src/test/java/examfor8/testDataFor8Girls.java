@@ -34,7 +34,7 @@ public class testDataFor8Girls {
                 {"25",	"RITA KUMARI",	"SURENDRA PASWAN",           },
                 {"26",	"SAHISTA KHATOON",	"MD NASIR",              },
                 {"27",	"SAIMA KHATOON",	"MD ALAMGIR KURAISI",    },
-                {"28",	"SALONI KUMARI",	"LT.FEKAN MALLIK",       },
+                {"28",	"SALONI KUMARI",	"LT FEKAN MALLIK",       },
                 {"29",	"SEEMA KUMARI",	"DHARMJIT PASWAN",           },
                 {"30",	"SHAIKA PARVEEN",	"MD NAJRE ALAM",         },
                 {"31",	"SHIVA RANI",	"JITENDRA VIKRAM",           },

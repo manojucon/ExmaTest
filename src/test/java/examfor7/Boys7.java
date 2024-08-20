@@ -73,7 +73,7 @@ public class Boys7 extends BaseTest {
         drop.get(1).click();
         Thread.sleep(300);
         List<WebElement> dropdown=driver.findElements(By.xpath("//span[text()='VAISHALI']"));
-        Thread.sleep(400);
+        Thread.sleep(600);
         dropdown.get(1).click();
         Thread.sleep(300);
         List<WebElement> next1 = driver.findElements(By.xpath("//div[@jsname='OCpkoe']"));

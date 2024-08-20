@@ -75,9 +75,9 @@ public class Girls12 extends BaseTest {
 
         // roll number
         List<WebElement> drop=driver.findElements(By.xpath("//span[text()='Choose']"));
-        Thread.sleep(100);
+        Thread.sleep(400);
         drop.get(1).click();
-        Thread.sleep(100);
+        Thread.sleep(500);
         List<WebElement> dropdown=driver.findElements(By.xpath("//span[text()='VAISHALI']"));
         Thread.sleep(600);
         dropdown.get(1).click();
@@ -114,8 +114,7 @@ public class Girls12 extends BaseTest {
         driver.findElement(By.xpath("//span[text()='"+third+"']")).click();      //3
 
         String fourth= test12.answerProperty12.getProperty("4");
-        List<WebElement> fouropt = driver.findElements(By.xpath("//span[text()='"+fourth+"']"));//4
-        fouropt.get(1).click();
+       driver.findElement(By.xpath("//span[text()='"+fourth+"']")).click();//4
 
         String fifth= test12.answerProperty12.getProperty("5");
         driver.findElement(By.xpath("//span[text()='"+fifth+"']")).click();    //6
@@ -139,8 +138,8 @@ public class Girls12 extends BaseTest {
         driver.findElement(By.xpath("//span[text()='"+tenth+"']")).click();*///10
 
         String tenth= test12.answerProperty12.getProperty("10");
-        List<WebElement> tenthopt = driver.findElements(By.xpath("//span[text()='"+tenth+"']"));
-        tenthopt.get(0).click();
+        driver.findElement(By.xpath("//span[text()='"+tenth+"']")).click();
+
 
         List<WebElement> sub= driver.findElements(By.xpath("//div[@aria-label = 'Submit']"));
         sub.get(0).click();
