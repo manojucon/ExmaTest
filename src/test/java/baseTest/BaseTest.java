@@ -1,12 +1,17 @@
 package baseTest;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeSuite;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.security.PublicKey;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
     public static String url12;
@@ -17,9 +22,14 @@ public class BaseTest {
     public static String url7;
     public static String url6;
     public Properties p;
+    public WebDriver driver;
 
 @BeforeSuite
     public void propertiesSetup() {
+    WebDriverManager.chromedriver().setup();
+    driver = new ChromeDriver();
+    driver.manage().window().maximize();
+    driver.manage().timeouts().implicitlyWait(900, TimeUnit.SECONDS);
         FileInputStream reader= null;
         try {
             reader = new FileInputStream("src/test/java/baseTest/urlTest.properties");

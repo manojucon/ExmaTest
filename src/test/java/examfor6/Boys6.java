@@ -5,41 +5,29 @@ import baseTest.BaseTest;
 import com.umasuraj.tutorailsninja.automation.testcases.GFG;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 public class Boys6 extends BaseTest {
 
     GFG gf = new GFG();
     public String text;
     List<String> integersFound;
-    WebDriver driver;
     JavascriptExecutor js;
     AnswerTest test6;
 
     @BeforeClass
     public void setup(){
-        ChromeOptions options = new ChromeOptions();
-        options.setCapability("browserVersion", "124.0.6367.79");
-        System.setProperty("webdriver.gecko.driver", "C:\\Users\\Manoj\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
-        driver = new ChromeDriver(options);
-        driver.manage().window().maximize();
         js = (JavascriptExecutor) driver;
-
-        driver.manage().timeouts().implicitlyWait(900, TimeUnit.SECONDS);
         test6 = new AnswerTest();
         test6.propertiesSetup();
     }
 
     @Test(priority = 1 , dataProvider="testData6Boys",dataProviderClass= testdata6boys.class)
-    public void verifyLoginWithValidCredentials(String rollno , String name, String fname) throws InterruptedException {
+    public void boys6(String rollno , String name, String fname) throws InterruptedException {
         driver.get(p.getProperty("test6"));
         Thread.sleep(400);
         driver.findElement(By.xpath("//input[@jsname='YPqjbf']")).sendKeys("shahpurkhurdu@gmail.com");
@@ -121,8 +109,8 @@ public class Boys6 extends BaseTest {
         driver.findElement(By.xpath("//span[text()='"+tenth+"']")).click();//10
 
 
-        List<WebElement> sub= driver.findElements(By.xpath("//div[@aria-label = 'Submit']"));
-        sub.get(0).click();
+      /*  List<WebElement> sub= driver.findElements(By.xpath("//div[@aria-label = 'Submit']"));
+        sub.get(0).click();*/
 
         driver.navigate().refresh();
 

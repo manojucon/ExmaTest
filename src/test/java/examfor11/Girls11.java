@@ -2,6 +2,7 @@ package examfor11;
 
 import baseTest.AnswerTest;
 import com.umasuraj.tutorailsninja.automation.testcases.GFG;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -20,16 +21,15 @@ public class Girls11 extends BaseTest{
     GFG gf = new GFG();
     public String text;
     List<String> integersFound;
-    WebDriver driver;
     JavascriptExecutor js ;
     AnswerTest test11;
 
     @BeforeClass
     public void setup(){
-        ChromeOptions options = new ChromeOptions();
+       /* ChromeOptions options = new ChromeOptions();
         options.setCapability("browserVersion", "124.0.6367.79");
         System.setProperty("webdriver.gecko.driver", "C:\\Users\\Manoj\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
-        driver = new ChromeDriver(options);
+        driver = new ChromeDriver(options);*/
         driver.manage().window().maximize();
         js = (JavascriptExecutor) driver;
 

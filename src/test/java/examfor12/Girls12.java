@@ -18,20 +18,13 @@ public class Girls12 extends BaseTest {
     GFG gf = new GFG();
     public String text;
     List<String> integersFound;
-    WebDriver driver;
     JavascriptExecutor js ;
     AnswerTest test12;
 
     @BeforeClass
     public void setup(){
-        ChromeOptions options = new ChromeOptions();
-        options.setCapability("browserVersion", "124.0.6367.79");
-        System.setProperty("webdriver.gecko.driver", "C:\\Users\\Manoj\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
-        driver = new ChromeDriver(options);
-        driver.manage().window().maximize();
         js = (JavascriptExecutor) driver;
 
-        driver.manage().timeouts().implicitlyWait(900, TimeUnit.SECONDS);
         test12 = new AnswerTest();
         test12.propertiesSetup();
     }

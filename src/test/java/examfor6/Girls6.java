@@ -20,33 +20,20 @@ public class Girls6 extends BaseTest {
     GFG gf = new GFG();
     public String text;
     List<String> integersFound;
-    WebDriver driver;
     JavascriptExecutor js ;
     AnswerTest test6;
 
     @BeforeClass
     public void setup(){
-        ChromeOptions options = new ChromeOptions();
-        options.setCapability("browserVersion", "124.0.6367.79");
-        System.setProperty("webdriver.gecko.driver", "C:\\Users\\Manoj\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
-        driver = new ChromeDriver(options);
-        driver.manage().window().maximize();
         js = (JavascriptExecutor) driver;
-
-        driver.manage().timeouts().implicitlyWait(900, TimeUnit.SECONDS);
         test6 = new AnswerTest();
         test6.propertiesSetup();
     }
 
-    @AfterClass
-    public void cleanup(){
-        driver.quit();
-    }
 
 
     @Test(priority = 1 , dataProvider="testData6Girls",dataProviderClass= testDataFor6Girls.class)
-    public void verifyLoginWithValidCredentials(String rollno , String name, String fname) throws InterruptedException {
-        driver.manage().timeouts().implicitlyWait(900, TimeUnit.SECONDS);
+    public void girls6(String rollno , String name, String fname) throws InterruptedException {
 
         driver.get(p.getProperty("test6"));
 
