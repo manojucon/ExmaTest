@@ -2,7 +2,6 @@ package examfor12;
 
 import baseTest.AnswerTest;
 import baseTest.BaseTest;
-import com.umasuraj.tutorailsninja.automation.testcases.GFG;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -21,7 +20,6 @@ import java.util.concurrent.TimeUnit;
 
 public class Boys12 extends BaseTest  {
 
-    GFG gf = new GFG();
     public String text;
     List<String> integersFound;
     JavascriptExecutor js;

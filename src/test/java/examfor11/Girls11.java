@@ -1,7 +1,6 @@
 package examfor11;
 
 import baseTest.AnswerTest;
-import com.umasuraj.tutorailsninja.automation.testcases.GFG;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -18,7 +17,6 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class Girls11 extends BaseTest{
-    GFG gf = new GFG();
     public String text;
     List<String> integersFound;
     JavascriptExecutor js ;

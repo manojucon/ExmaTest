@@ -3,7 +3,6 @@ package examfor12;
 import baseTest.AnswerTest;
 import baseTest.BaseTest;
 
-import com.umasuraj.tutorailsninja.automation.testcases.GFG;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -15,7 +14,6 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class Girls12 extends BaseTest {
-    GFG gf = new GFG();
     public String text;
     List<String> integersFound;
     JavascriptExecutor js ;

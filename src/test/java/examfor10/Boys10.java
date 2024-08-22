@@ -2,13 +2,11 @@ package examfor10;
 
 import baseTest.AnswerTest;
 import baseTest.BaseTest;
-import com.umasuraj.tutorailsninja.automation.testcases.GFG;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -17,7 +15,6 @@ import java.util.concurrent.TimeUnit;
 
 public class Boys10 extends BaseTest {
 
-    GFG gf = new GFG();
     public String text;
     List<String> integersFound;
     JavascriptExecutor js;

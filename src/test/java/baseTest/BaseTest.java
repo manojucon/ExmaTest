@@ -24,7 +24,7 @@ public class BaseTest {
     public Properties p;
     public WebDriver driver;
 
-@BeforeSuite
+    @BeforeSuite
     public void propertiesSetup() {
     WebDriverManager.chromedriver().setup();
     driver = new ChromeDriver();
