@@ -72,6 +72,7 @@ public class Boys7 extends BaseTest {
 
         /*----------------------------------------------------------------*/
         /*ANSWER to the Questions */
+        Thread.sleep(900);
 
         String first= test7.answerProperty7.getProperty("1");
         driver.findElement(By.xpath("//span[text()='"+first+"']")).click();//1

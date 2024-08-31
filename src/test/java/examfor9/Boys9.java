@@ -90,6 +90,7 @@ public class Boys9 extends BaseTest {
 
         }
 */
+        Thread.sleep(900);
         String first= test9.answerProperty9.getProperty("1");
         driver.findElement(By.xpath("//span[text()='"+first+"']")).click();//1
 

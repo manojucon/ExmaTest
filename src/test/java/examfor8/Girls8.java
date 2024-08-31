@@ -73,6 +73,7 @@ public class Girls8 extends BaseTest {
         List<WebElement> next1 = driver.findElements(By.xpath("//div[@jsname='OCpkoe']"));
         Thread.sleep(200);
         next1.get(0).click();
+        Thread.sleep(900);
 
 
         /*----------------------------------------------------------------*/
@@ -92,6 +93,7 @@ public class Girls8 extends BaseTest {
         {
 
         }*/
+        Thread.sleep(900);
 
         String first= test8.answerProperty8.getProperty("1");
         driver.findElement(By.xpath("//span[text()='"+first+"']")).click();//1

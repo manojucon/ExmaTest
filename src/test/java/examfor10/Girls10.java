@@ -100,6 +100,8 @@ public class Girls10 extends BaseTest{
 
         }*/
 
+        Thread.sleep(900);
+
         String first= test10.answerProperty10.getProperty("1");
         driver.findElement(By.xpath("//span[text()='"+first+"']")).click();//1
 
@@ -125,7 +127,8 @@ public class Girls10 extends BaseTest{
         eightopt.get(1).click();  *///8
         //8
         String eight= test10.answerProperty10.getProperty("8");
-        driver.findElement(By.xpath("//span[text()='"+eight+"']")).click();
+        List<WebElement> eightopt = driver.findElements(By.xpath("//span[text()='"+eight+"']"));
+        eightopt.get(1).click();
         //9
         String ninth= test10.answerProperty10.getProperty("9");
         driver.findElement(By.xpath("//span[text()='"+ninth+"']")).click();//10

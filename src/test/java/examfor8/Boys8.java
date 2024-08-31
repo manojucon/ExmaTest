@@ -4,10 +4,7 @@ import baseTest.AnswerTest;
 import baseTest.BaseTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -72,6 +69,7 @@ public class Boys8 extends BaseTest {
         List<WebElement> next1 = driver.findElements(By.xpath("//div[@jsname='OCpkoe']"));
         Thread.sleep(200);
         next1.get(0).click();
+        Thread.sleep(900);
 
 
         /*----------------------------------------------------------------*/
@@ -92,6 +90,7 @@ public class Boys8 extends BaseTest {
 
         }
 */
+        Thread.sleep(900);
         String first= test8.answerProperty8.getProperty("1");
         driver.findElement(By.xpath("//span[text()='"+first+"']")).click();//1
 

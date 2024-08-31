@@ -88,7 +88,7 @@ public class Girls11 extends BaseTest{
 
         /*----------------------------------------------------------------*/
         /*ANSWER to the Questions */
-
+        Thread.sleep(900);
         String first= test11.answerProperty11.getProperty("1");
         driver.findElement(By.xpath("//span[text()='"+first+"']")).click();//1
 
