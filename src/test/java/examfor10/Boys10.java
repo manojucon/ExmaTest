@@ -93,14 +93,35 @@ public class Boys10 extends BaseTest {
         }
 */
         Thread.sleep(900);
-        String first= test10.answerProperty10.getProperty("1");
-        driver.findElement(By.xpath("//span[text()='"+first+"']")).click();//1
+        Integer x = Integer.valueOf(rollno);
+        if(x>=1 && x<=5){
+            List<WebElement> wr=driver.findElements(By.xpath("//label"));
+            wr.get(0).click();
+        }
+        else
+        {
+            String first= test10.answerProperty10.getProperty("1");
+            driver.findElement(By.xpath("//span[text()='"+first+"']")).click();
+        }
+        if(x>=5 && x<=10){
+            List<WebElement> wr=driver.findElements(By.xpath("//label"));
+            wr.get(5).click();
+        }
+        else
+        {
+            String second= test10.answerProperty10.getProperty("2");
+            driver.findElement(By.xpath("//span[text()='"+second+"']")).click();
+        }
 
-        String second= test10.answerProperty10.getProperty("2");
-        driver.findElement(By.xpath("//span[text()='"+second+"']")).click();
-        //2
-        String third= test10.answerProperty10.getProperty("3");
-        driver.findElement(By.xpath("//span[text()='"+third+"']")).click();      //3
+        if(x>=10 && x<=20){
+            List<WebElement> wr=driver.findElements(By.xpath("//label"));
+            wr.get(9).click();
+        }
+        else
+        {
+            String third= test10.answerProperty10.getProperty("3");
+            driver.findElement(By.xpath("//span[text()='"+third+"']")).click();
+        }     //3
 
         String fourth= test10.answerProperty10.getProperty("4");
         driver.findElement(By.xpath("//span[text()='"+fourth+"']")).click();
@@ -118,8 +139,7 @@ public class Boys10 extends BaseTest {
         eightopt.get(1).click();  *///8
         //8
         String eight= test10.answerProperty10.getProperty("8");
-        List<WebElement> eightopt = driver.findElements(By.xpath("//span[text()='"+eight+"']"));
-        eightopt.get(1).click();
+       driver.findElement(By.xpath("//span[text()='"+eight+"']")).click();
         //9
         String ninth= test10.answerProperty10.getProperty("9");
         driver.findElement(By.xpath("//span[text()='"+ninth+"']")).click();//10

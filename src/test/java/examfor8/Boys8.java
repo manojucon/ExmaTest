@@ -91,15 +91,35 @@ public class Boys8 extends BaseTest {
         }
 */
         Thread.sleep(900);
-        String first= test8.answerProperty8.getProperty("1");
-        driver.findElement(By.xpath("//span[text()='"+first+"']")).click();//1
+        Integer x = Integer.valueOf(rollno);
+        if(x>=1 && x<=5){
+            List<WebElement> wr=driver.findElements(By.xpath("//label"));
+            wr.get(0).click();
+        }
+        else
+        {
+            String first= test8.answerProperty8.getProperty("1");
+            driver.findElement(By.xpath("//span[text()='"+first+"']")).click();
+        }
+        if(x>=5 && x<=10){
+            List<WebElement> wr=driver.findElements(By.xpath("//label"));
+            wr.get(5).click();
+        }
+        else
+        {
+            String second= test8.answerProperty8.getProperty("2");
+            driver.findElement(By.xpath("//span[text()='"+second+"']")).click();
+        }
 
-        String second= test8.answerProperty8.getProperty("2");
-        driver.findElement(By.xpath("//span[text()='"+second+"']")).click();
-        //2
-        String third= test8.answerProperty8.getProperty("3");
-        driver.findElement(By.xpath("//span[text()='"+third+"']")).click();      //3
-
+        if(x>=10 && x<=20){
+            List<WebElement> wr=driver.findElements(By.xpath("//label"));
+            wr.get(9).click();
+        }
+        else
+        {
+            String third= test8.answerProperty8.getProperty("3");
+            driver.findElement(By.xpath("//span[text()='"+third+"']")).click();
+        }
         String fourth= test8.answerProperty8.getProperty("4");
         driver.findElement(By.xpath("//span[text()='"+fourth+"']")).click();
 
