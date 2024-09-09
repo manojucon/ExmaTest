@@ -8,7 +8,9 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
 import java.util.List;
+import java.util.Set;
 
 public class Boys6 extends BaseTest {
 
@@ -25,8 +27,9 @@ public class Boys6 extends BaseTest {
     }
 
     @Test(priority = 1 , dataProvider="testData6Boys",dataProviderClass= testdata6boys.class)
-    public void boys6(String rollno , String name, String fname) throws InterruptedException {
+    public void boys6(String rollno , String name, String fname) throws InterruptedException, IOException {
         driver.get(p.getProperty("test6"));
+        getScreenshoot();
         Thread.sleep(400);
         driver.findElement(By.xpath("//input[@jsname='YPqjbf']")).sendKeys("shahpurkhurdu@gmail.com");
         driver.findElement(By.xpath("//span[contains(text(),'Next')]")).click();
@@ -131,8 +134,12 @@ public class Boys6 extends BaseTest {
 
         List<WebElement> sub= driver.findElements(By.xpath("//div[@aria-label = 'Submit']"));
         sub.get(0).click();
+      /*  Thread.sleep(900);
+        driver.findElement(By.xpath("//span[text()='View score']")).click();
+        String winHandleBefore = driver.getWindowHandle();*/
 
-        driver.navigate().refresh();
+// Perform the click operation that opens new window
 
+// Switch to new window opened
     }
 }

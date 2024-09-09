@@ -1,16 +1,23 @@
 package baseTest;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeSuite;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.security.PublicKey;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Iterator;
 import java.util.Properties;
+import java.util.Random;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
@@ -49,6 +56,43 @@ public class BaseTest {
         url8=p.getProperty("test8");
         url7=p.getProperty("test7");
         url6=p.getProperty("test6");
+
+    }
+
+    @AfterMethod
+    public void getOutput() throws IOException, InterruptedException {
+        Thread.sleep(900);
+        String parent=driver.getWindowHandle();
+        driver.findElement(By.xpath("//span[text()='View score']")).click();
+        Thread.sleep(400);
+        Set<String>s=driver.getWindowHandles();
+
+// Now iterate using Iterator
+        Iterator<String> I1= s.iterator();
+
+        while(I1.hasNext()) {
+
+            String child_window = I1.next();
+            if (!parent.equals(child_window)) {
+                driver.switchTo().window(child_window);
+            }
+        }
+
+        getScreenshoot();
+        driver.switchTo().window(parent);
+    }
+
+
+    public void getScreenshoot() throws IOException {
+        Random rand = new Random();
+
+        // Generate random integers in range 0 to 999
+        Double rand_int1 = rand.nextDouble(10000000);
+        TakesScreenshot screenshot = (TakesScreenshot)driver;
+//Saving the screenshot in desired location
+        File source = screenshot.getScreenshotAs(OutputType.FILE);
+//Path to the location to save screenshot
+        FileUtils.copyFile(source, new File("./SeleniumScreenshots/Screen.png"+ rand_int1));
 
     }
 }
