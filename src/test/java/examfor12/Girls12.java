@@ -131,12 +131,12 @@ public class Girls12 extends BaseTest {
         String seventh= test12.answerProperty12.getProperty("7");
         driver.findElement(By.xpath("//span[text()='"+seventh+"']")).click();
         // Multiple Answer
-        String eight= test12.answerProperty12.getProperty("8");
-        List<WebElement> eightopt = driver.findElements(By.xpath("//span[text()='"+eight+"']"));
-        eightopt.get(1).click();  //8
-        //8
        /* String eight= test12.answerProperty12.getProperty("8");
-        driver.findElement(By.xpath("//span[text()='"+eight+"']")).click();*/
+        List<WebElement> eightopt = driver.findElements(By.xpath("//span[text()='"+eight+"']"));
+        eightopt.get(1).click(); */ //8
+        //8
+        String eight= test12.answerProperty12.getProperty("8");
+        driver.findElement(By.xpath("//span[text()='"+eight+"']")).click();
         //9
         String ninth= test12.answerProperty12.getProperty("9");
         driver.findElement(By.xpath("//span[text()='"+ninth+"']")).click();//10
@@ -148,8 +148,16 @@ public class Girls12 extends BaseTest {
         driver.findElement(By.xpath("//span[text()='"+tenth+"']")).click();
 
 
-        List<WebElement> sub= driver.findElements(By.xpath("//div[@aria-label = 'Submit']"));
+       List<WebElement> sub= driver.findElements(By.xpath("//div[@aria-label = 'Submit']"));
         sub.get(0).click();
+
+        List<WebElement> wr1=driver.findElements(By.xpath("//label"));
+        wr1.get(BaseTest.getSingleDigit()).click();
+        List<WebElement> wr2=driver.findElements(By.xpath("//label"));
+        wr2.get(BaseTest.getSingleDigit()).click();
+        List<WebElement> wr3=driver.findElements(By.xpath("//label"));
+        wr3.get(BaseTest.getSingleDigit()).click();
+
         driver.navigate().refresh();
     }
 }

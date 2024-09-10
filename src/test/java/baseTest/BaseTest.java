@@ -33,33 +33,33 @@ public class BaseTest {
 
     @BeforeSuite
     public void propertiesSetup() {
-    WebDriverManager.chromedriver().setup();
-    driver = new ChromeDriver();
-    driver.manage().window().maximize();
-    driver.manage().timeouts().implicitlyWait(900, TimeUnit.SECONDS);
-        FileInputStream reader= null;
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(900, TimeUnit.SECONDS);
+        FileInputStream reader = null;
         try {
             reader = new FileInputStream("src/test/java/baseTest/urlTest.properties");
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
-         p=new Properties();
+        p = new Properties();
         try {
             p.load(reader);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        url12=p.getProperty("test12");
-        url11=p.getProperty("test11");
-        url10=p.getProperty("test10");
-        url9=p.getProperty("test9");
-        url8=p.getProperty("test8");
-        url7=p.getProperty("test7");
-        url6=p.getProperty("test6");
+        url12 = p.getProperty("test12");
+        url11 = p.getProperty("test11");
+        url10 = p.getProperty("test10");
+        url9 = p.getProperty("test9");
+        url8 = p.getProperty("test8");
+        url7 = p.getProperty("test7");
+        url6 = p.getProperty("test6");
 
     }
 
-    @AfterMethod
+  /*  @AfterMethod
     public void getOutput() throws IOException, InterruptedException {
         Thread.sleep(900);
         String parent=driver.getWindowHandle();
@@ -79,8 +79,9 @@ public class BaseTest {
         }
 
         getScreenshoot();
+        driver.close();
         driver.switchTo().window(parent);
-    }
+    }*/
 
 
     public void getScreenshoot() throws IOException {
@@ -88,11 +89,19 @@ public class BaseTest {
 
         // Generate random integers in range 0 to 999
         Double rand_int1 = rand.nextDouble(10000000);
-        TakesScreenshot screenshot = (TakesScreenshot)driver;
+        TakesScreenshot screenshot = (TakesScreenshot) driver;
 //Saving the screenshot in desired location
         File source = screenshot.getScreenshotAs(OutputType.FILE);
 //Path to the location to save screenshot
-        FileUtils.copyFile(source, new File("./SeleniumScreenshots/Screen.png"+ rand_int1));
+        FileUtils.copyFile(source, new File("./SeleniumScreenshots/" + rand_int1 + "Screen.png"));
+
+    }
+
+    public static int getSingleDigit(){
+        Random rand = new Random();
+        int rand_int1 = rand.nextInt(10);
+        return (rand_int1);
 
     }
 }
+

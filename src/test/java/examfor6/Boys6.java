@@ -29,7 +29,6 @@ public class Boys6 extends BaseTest {
     @Test(priority = 1 , dataProvider="testData6Boys",dataProviderClass= testdata6boys.class)
     public void boys6(String rollno , String name, String fname) throws InterruptedException, IOException {
         driver.get(p.getProperty("test6"));
-        getScreenshoot();
         Thread.sleep(400);
         driver.findElement(By.xpath("//input[@jsname='YPqjbf']")).sendKeys("shahpurkhurdu@gmail.com");
         driver.findElement(By.xpath("//span[contains(text(),'Next')]")).click();
@@ -132,11 +131,19 @@ public class Boys6 extends BaseTest {
         driver.findElement(By.xpath("//span[text()='"+tenth+"']")).click();//10
 
 
-        List<WebElement> sub= driver.findElements(By.xpath("//div[@aria-label = 'Submit']"));
+       List<WebElement> sub= driver.findElements(By.xpath("//div[@aria-label = 'Submit']"));
         sub.get(0).click();
-      /*  Thread.sleep(900);
+
+        List<WebElement> wr1=driver.findElements(By.xpath("//label"));
+        wr1.get(BaseTest.getSingleDigit()).click();
+        List<WebElement> wr2=driver.findElements(By.xpath("//label"));
+        wr2.get(BaseTest.getSingleDigit()).click();
+        List<WebElement> wr3=driver.findElements(By.xpath("//label"));
+        wr3.get(BaseTest.getSingleDigit()).click();
+
+        Thread.sleep(900);
         driver.findElement(By.xpath("//span[text()='View score']")).click();
-        String winHandleBefore = driver.getWindowHandle();*/
+        String winHandleBefore = driver.getWindowHandle();
 
 // Perform the click operation that opens new window
 
