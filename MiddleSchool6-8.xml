@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ExamforAllclasses" parallel="methods" thread-count="3">
+
+    <test name="WeeklyExamfor6-8" >
+        <classes>
+            <class name="examfor6.Boys6" />
+            <class name="examfor6.Girls6" />
+            <class name="examfor7.Boys7" />
+            <class name="examfor7.Girls7" />
+            <class name="examfor8.Boys8" />
+            <class name="examfor8.Girls8" />
+        </classes>
+    </test>
+
+</suite> <!-- Suite -->

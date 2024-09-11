@@ -131,8 +131,7 @@ public class Boys6 extends BaseTest {
         driver.findElement(By.xpath("//span[text()='"+tenth+"']")).click();//10
 
 
-       List<WebElement> sub= driver.findElements(By.xpath("//div[@aria-label = 'Submit']"));
-        sub.get(0).click();
+
 
         List<WebElement> wr1=driver.findElements(By.xpath("//label"));
         wr1.get(BaseTest.getSingleDigit()).click();
@@ -141,9 +140,9 @@ public class Boys6 extends BaseTest {
         List<WebElement> wr3=driver.findElements(By.xpath("//label"));
         wr3.get(BaseTest.getSingleDigit()).click();
 
-        Thread.sleep(900);
-        driver.findElement(By.xpath("//span[text()='View score']")).click();
-        String winHandleBefore = driver.getWindowHandle();
+        List<WebElement> sub= driver.findElements(By.xpath("//div[@aria-label = 'Submit']"));
+        sub.get(0).click();
+        driver.navigate().refresh();
 
 // Perform the click operation that opens new window
 

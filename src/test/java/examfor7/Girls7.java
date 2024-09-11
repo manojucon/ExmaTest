@@ -141,8 +141,7 @@ public class Girls7 extends BaseTest {
         String tenth= test7.answerProperty7.getProperty("10");
         driver.findElement(By.xpath("//span[text()='"+tenth+"']")).click();
 
-       List<WebElement> sub= driver.findElements(By.xpath("//div[@aria-label = 'Submit']"));
-        sub.get(0).click();
+
 
         List<WebElement> wr1=driver.findElements(By.xpath("//label"));
         wr1.get(BaseTest.getSingleDigit()).click();
@@ -150,6 +149,8 @@ public class Girls7 extends BaseTest {
         wr2.get(BaseTest.getSingleDigit()).click();
         List<WebElement> wr3=driver.findElements(By.xpath("//label"));
         wr3.get(BaseTest.getSingleDigit()).click();
+        List<WebElement> sub= driver.findElements(By.xpath("//div[@aria-label = 'Submit']"));
+        sub.get(0).click();
 
 
         driver.navigate().refresh();
