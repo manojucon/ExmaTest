@@ -91,35 +91,14 @@ public class Boys9 extends BaseTest {
         }
 */
         Thread.sleep(900);
-        Integer x = Integer.valueOf(rollno);
-        if(x>=1 && x<=5){
-            List<WebElement> wr=driver.findElements(By.xpath("//label"));
-            wr.get(0).click();
-        }
-        else
-        {
-            String first= test9.answerProperty9.getProperty("1");
-            driver.findElement(By.xpath("//span[text()='"+first+"']")).click();
-        }
-        if(x>=5 && x<=10){
-            List<WebElement> wr=driver.findElements(By.xpath("//label"));
-            wr.get(5).click();
-        }
-        else
-        {
-            String second= test9.answerProperty9.getProperty("2");
-            driver.findElement(By.xpath("//span[text()='"+second+"']")).click();
-        }
+        String first= test9.answerProperty9.getProperty("1");
+        driver.findElement(By.xpath("//span[text()='"+first+"']")).click();//1
 
-        if(x>=10 && x<=20){
-            List<WebElement> wr=driver.findElements(By.xpath("//label"));
-            wr.get(9).click();
-        }
-        else
-        {
-            String third= test9.answerProperty9.getProperty("3");
-            driver.findElement(By.xpath("//span[text()='"+third+"']")).click();
-        }     //3
+        String second= test9.answerProperty9.getProperty("2");
+        driver.findElement(By.xpath("//span[text()='"+second+"']")).click();
+        //2
+        String third= test9.answerProperty9.getProperty("3");
+        driver.findElement(By.xpath("//span[text()='"+third+"']")).click();//3
         //3
 
         String fourth= test9.answerProperty9.getProperty("4");
