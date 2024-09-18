@@ -78,6 +78,8 @@ public class BaseTest {
 
 
     public void getScreenshoot() throws IOException {
+
+//Then just take it as a String
         Random rand = new Random();
 
         // Generate random integers in range 0 to 999
@@ -90,7 +92,7 @@ public class BaseTest {
 
     public static int getSingleDigit(){
         Random rand = new Random();
-        int rand_int1 = rand.nextInt(10);
+        int rand_int1 = rand.nextInt(39);
         return (rand_int1);
 
     }
