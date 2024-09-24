@@ -106,7 +106,8 @@ public class Boys12 extends BaseTest {
         driver.findElement(By.xpath("//span[text()='"+fifth+"']")).click();    //6
 
         String sixth= test12.answerProperty12.getProperty("6");
-        driver.findElement(By.xpath("//span[text()='"+sixth+"']")).click();     //7
+        List<WebElement> eightopt = driver.findElements(By.xpath("//span[text()='"+sixth+"']"));
+        eightopt.get(1).click();    //7
 
         String seventh= test12.answerProperty12.getProperty("7");
         driver.findElement(By.xpath("//span[text()='"+seventh+"']")).click();
@@ -119,7 +120,8 @@ public class Boys12 extends BaseTest {
         driver.findElement(By.xpath("//span[text()='"+eight+"']")).click();
         //9
         String ninth= test12.answerProperty12.getProperty("9");
-        driver.findElement(By.xpath("//span[text()='"+ninth+"']")).click();//10
+        List<WebElement> ninthopt = driver.findElements(By.xpath("//span[text()='"+ninth+"']"));
+        ninthopt.get(1).click();//10
 
        /* String tenth= "Function Keys";
         driver.findElement(By.xpath("//span[text()='"+tenth+"']")).click();*///10

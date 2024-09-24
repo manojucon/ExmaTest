@@ -100,7 +100,8 @@ public class Boys11 extends BaseTest {
         eightopt.get(1).click();  *///8
         //8
         String eight= test11.answerProperty11.getProperty("8");
-        driver.findElement(By.xpath("//span[text()='"+eight+"']")).click();
+        List<WebElement> eightopt = driver.findElements(By.xpath("//span[text()='"+eight+"']"));
+        eightopt.get(1).click();
         //9
         String ninth= test11.answerProperty11.getProperty("9");
         driver.findElement(By.xpath("//span[text()='"+ninth+"']")).click();//10

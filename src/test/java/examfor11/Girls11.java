@@ -97,7 +97,7 @@ public class Girls11 extends BaseTest{
         driver.findElement(By.xpath("//span[text()='"+second+"']")).click();
         //2
         String third= test11.answerProperty11.getProperty("3");
-        driver.findElement(By.xpath("//span[text()='"+third+"']")).click();
+        driver.findElement(By.xpath("//span[text()='"+third+"']")).click();    //3
 
         String fourth= test11.answerProperty11.getProperty("4");
         driver.findElement(By.xpath("//span[text()='"+fourth+"']")).click();;//4
@@ -115,7 +115,8 @@ public class Girls11 extends BaseTest{
         eightopt.get(1).click();  *///8
         //8
         String eight= test11.answerProperty11.getProperty("8");
-        driver.findElement(By.xpath("//span[text()='"+eight+"']")).click();
+        List<WebElement> eightopt = driver.findElements(By.xpath("//span[text()='"+eight+"']"));
+        eightopt.get(1).click();
         //9
         String ninth= test11.answerProperty11.getProperty("9");
         driver.findElement(By.xpath("//span[text()='"+ninth+"']")).click();//10
@@ -129,8 +130,8 @@ public class Girls11 extends BaseTest{
         wr1.get(BaseTest.getSingleDigit()).click();
         List<WebElement> wr2=driver.findElements(By.xpath("//label"));
         wr2.get(BaseTest.getSingleDigit()).click();
-        List<WebElement> wr3=driver.findElements(By.xpath("//label"));
-        wr3.get(BaseTest.getSingleDigit()).click();
+        /*List<WebElement> wr3=driver.findElements(By.xpath("//label"));
+        wr3.get(BaseTest.getSingleDigit()).click();*/
         List<WebElement> sub= driver.findElements(By.xpath("//div[@aria-label = 'Submit']"));
         sub.get(0).click();
 

@@ -134,8 +134,8 @@ public class Boys10 extends BaseTest {
         wr1.get(BaseTest.getSingleDigit()).click();
         List<WebElement> wr2=driver.findElements(By.xpath("//label"));
         wr2.get(BaseTest.getSingleDigit()).click();
-        List<WebElement> wr3=driver.findElements(By.xpath("//label"));
-        wr3.get(BaseTest.getSingleDigit()).click();
+       /* List<WebElement> wr3=driver.findElements(By.xpath("//label"));
+        wr3.get(BaseTest.getSingleDigit()).click();*/
         List<WebElement> sub= driver.findElements(By.xpath("//div[@aria-label = 'Submit']"));
         sub.get(0).click();
 
