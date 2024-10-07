@@ -143,7 +143,7 @@ public class Girls9 extends BaseTest {
         List<WebElement> sub= driver.findElements(By.xpath("//div[@aria-label = 'Submit']"));
         sub.get(0).click();
 
-        driver.navigate().refresh();
+        getViewScore();
 
 
     }

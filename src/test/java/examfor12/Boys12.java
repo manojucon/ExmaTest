@@ -3,8 +3,10 @@ package examfor12;
 import baseTest.AnswerTest;
 import baseTest.BaseTest;
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -106,8 +108,7 @@ public class Boys12 extends BaseTest {
         driver.findElement(By.xpath("//span[text()='"+fifth+"']")).click();    //6
 
         String sixth= test12.answerProperty12.getProperty("6");
-        List<WebElement> eightopt = driver.findElements(By.xpath("//span[text()='"+sixth+"']"));
-        eightopt.get(1).click();    //7
+        driver.findElement(By.xpath("//span[text()='"+sixth+"']")).click();    //7
 
         String seventh= test12.answerProperty12.getProperty("7");
         driver.findElement(By.xpath("//span[text()='"+seventh+"']")).click();
@@ -120,8 +121,7 @@ public class Boys12 extends BaseTest {
         driver.findElement(By.xpath("//span[text()='"+eight+"']")).click();
         //9
         String ninth= test12.answerProperty12.getProperty("9");
-        List<WebElement> ninthopt = driver.findElements(By.xpath("//span[text()='"+ninth+"']"));
-        ninthopt.get(1).click();//10
+        driver.findElement(By.xpath("//span[text()='"+ninth+"']")).click();
 
        /* String tenth= "Function Keys";
         driver.findElement(By.xpath("//span[text()='"+tenth+"']")).click();*///10
@@ -137,7 +137,22 @@ public class Boys12 extends BaseTest {
         wr3.get(BaseTest.getSingleDigit()).click();
         List<WebElement> sub= driver.findElements(By.xpath("//div[@aria-label = 'Submit']"));
         sub.get(0).click();
-        driver.navigate().refresh();
+        Thread.sleep(9000);
+        getViewScore();
+        //getViewScore();
+
+       /* Thread.sleep(900);
+        try {
+            WebElement ele= driver.findElement(By.xpath("//span[text()='View score']"));
+            Assert.assertEquals(true, ele.isEnabled());
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+        finally {
+            getViewScore();
+        }
+        */
 
     }
 }

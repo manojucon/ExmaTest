@@ -126,7 +126,7 @@ public class Girls8 extends BaseTest {
         sub.get(0).click();
 
 
-        driver.navigate().refresh();
+        getViewScore();
 
     }
 }

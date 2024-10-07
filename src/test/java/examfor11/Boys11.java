@@ -101,7 +101,7 @@ public class Boys11 extends BaseTest {
         //8
         String eight= test11.answerProperty11.getProperty("8");
         List<WebElement> eightopt = driver.findElements(By.xpath("//span[text()='"+eight+"']"));
-        eightopt.get(1).click();
+        eightopt.get(0).click();
         //9
         String ninth= test11.answerProperty11.getProperty("9");
         driver.findElement(By.xpath("//span[text()='"+ninth+"']")).click();//10
@@ -121,7 +121,7 @@ public class Boys11 extends BaseTest {
         sub.get(0).click();
 
 
-        driver.navigate().refresh();
+        getViewScore();
 
     }
 }

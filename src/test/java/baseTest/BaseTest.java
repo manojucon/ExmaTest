@@ -2,10 +2,9 @@ package baseTest;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.BeforeSuite;
 
 import java.io.*;
@@ -30,6 +29,8 @@ public class BaseTest {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(900, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(900, TimeUnit.SECONDS);
+        driver.manage().timeouts().setScriptTimeout(900, TimeUnit.SECONDS);
         FileInputStream reader = null;
         try {
             reader = new FileInputStream("src/test/java/baseTest/urlTest.properties");
@@ -90,11 +91,25 @@ public class BaseTest {
 
     }
 
-    public static int getSingleDigit(){
+    public static int getSingleDigit() {
         Random rand = new Random();
         int rand_int1 = rand.nextInt(39);
         return (rand_int1);
 
     }
+
+    public void getViewScore() throws InterruptedException {
+        Thread.sleep(900);
+        try {
+            WebElement ele = driver.findElement(By.xpath("//span[text()='View score']"));
+            Assert.assertEquals(true, ele.isEnabled());
+        } catch (TimeoutException e) {
+            e.printStackTrace();
+        } finally {
+            driver.navigate().refresh();
+        }
+
+    }
+
 }
 
