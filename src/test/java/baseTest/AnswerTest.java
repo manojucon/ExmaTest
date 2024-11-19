@@ -59,17 +59,17 @@ public class AnswerTest extends BaseTest {
             throw new RuntimeException(e);
         }
 
-        try {
+       /* try {
             answerProperty12.load(answer12);
             answerProperty11.load(answer11);
             answerProperty10.load(answer10);
-          /*  answerProperty9.load(answer9);*/
+          *//*  answerProperty9.load(answer9);*//*
             answerProperty8.load(answer8);
             answerProperty7.load(answer7);
             answerProperty6.load(answer6);
         } catch (IOException e) {
             throw new RuntimeException(e);
-        }
+        }*/
     }
 }
 

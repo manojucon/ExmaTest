@@ -43,41 +43,41 @@ public class Girls9 extends BaseTest {
         driver.get(p.getProperty("test9"));
 
         driver.findElement(By.xpath("//input[@jsname='YPqjbf']")).sendKeys("shahpurkhurdu@gmail.com");
-       driver.findElement(By.xpath("//span[contains(text(),'Next')]")).click();
-        Thread.sleep(900);
-
-        WebElement sname=driver.findElement(By.xpath("//input[@aria-labelledby='i1']"));//
-        // name
+        driver.findElement(By.xpath("//span[contains(text(),'Next')]")).click();
+        Thread.sleep(400);
+        WebElement sname=driver.findElement(By.xpath("//input[@jsname='YPqjbf']"));
         sname.sendKeys(name);
         driver.findElement(By.xpath("//span[text()='Female']")).click();
-        WebElement fsname=driver.findElement(By.xpath("//input[@aria-labelledby='i15']"));// fathers name
-        fsname.sendKeys(fname);
+        List<WebElement> textFields =driver.findElements(By.xpath("//input[@jsname='YPqjbf']"));// fathers name
+        textFields.get(1).sendKeys(fname);
+        Thread.sleep(200);
+        textFields.get(2).sendKeys("10180401802");
+        Thread.sleep(200);
+        textFields.get(3).sendKeys("UHS SHAHPUR KHURD");
+        Thread.sleep(200);
         driver.findElement(By.xpath("//div[@jsname= 'd9BH4c']")).click();
-        Thread.sleep(500);
+        Thread.sleep(300);
         List<WebElement> m = driver.findElements(By.xpath("//span[text()='BOO']"));
         Thread.sleep(300);
         m.get(1).click();
         Thread.sleep(300);
-        driver.findElement(By.xpath("//input[@aria-labelledby='i23']")).sendKeys("10180401802");
-        driver.findElement(By.xpath("//input[@aria-labelledby='i27']")).sendKeys("UHS SHAHPUR KHURD");
-        WebElement button = driver.findElement(By.xpath("//label[@for='i35']"));
+        WebElement button = driver.findElement(By.xpath("//span[text()='9']"));
         js.executeScript("arguments[0].click();", button);
 
-        // ROLL   NO ROLL     BUM     ROLLL
-        driver.findElement(By.xpath("//input[@aria-labelledby='i38']")).sendKeys(rollno);
-
-        // roll number
+        textFields.get(4).sendKeys(rollno);
+        Thread.sleep(200);
         List<WebElement> drop=driver.findElements(By.xpath("//span[text()='Choose']"));
-        Thread.sleep(500);
+        Thread.sleep(100);
         drop.get(1).click();
-        Thread.sleep(300);
-        List<WebElement> dropdown=driver.findElements(By.xpath("//span[text()='VAISHALI']"));
         Thread.sleep(400);
+        List<WebElement> dropdown=driver.findElements(By.xpath("//span[text()='VAISHALI']"));
+        Thread.sleep(600);
         dropdown.get(1).click();
         Thread.sleep(300);
         List<WebElement> next1 = driver.findElements(By.xpath("//div[@jsname='OCpkoe']"));
         Thread.sleep(200);
         next1.get(0).click();
+        Thread.sleep(400);
 
         /*----------------------------------------------------------------*/
         /*ANSWER to the Questions */
@@ -121,7 +121,7 @@ public class Girls9 extends BaseTest {
         // Multiple Answer
         String eight= test9.answerProperty9.getProperty("8");
         List<WebElement> eightopt = driver.findElements(By.xpath("//span[text()='"+eight+"']"));
-        eightopt.get(1).click();
+        eightopt.get(0).click();
         /*String eight= test9.answerProperty9.getProperty("8");
         driver.findElement(By.xpath("//span[text()='"+eight+"']")).click();*/
         //9

@@ -78,19 +78,19 @@ public class BaseTest {
     }*/
 
 
-    public void getScreenshoot() throws IOException {
+   /* public void getScreenshoot() throws IOException {
 
 //Then just take it as a String
         Random rand = new Random();
 
         // Generate random integers in range 0 to 999
-        Double rand_int1 = rand.nextDouble(10000000);
+        Double rand_int1 = rand.nextDouble(1000000);
         TakesScreenshot screenshot = (TakesScreenshot) driver;
         File source = screenshot.getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(source, new File("./SeleniumScreenshots/" + rand_int1 + "Screen.png"));
 
     }
-
+*/
     public static int getSingleDigit() {
         Random rand = new Random();
         int rand_int1 = rand.nextInt(39);
