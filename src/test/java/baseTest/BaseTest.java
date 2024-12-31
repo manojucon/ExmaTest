@@ -5,6 +5,8 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 
 import java.io.*;
@@ -23,7 +25,7 @@ public class BaseTest {
     public Properties p;
     public WebDriver driver;
 
-    @BeforeSuite
+    @BeforeClass
     public void propertiesSetup() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
@@ -52,6 +54,11 @@ public class BaseTest {
         url6 = p.getProperty("test6");
 
     }
+    @AfterClass
+    public void cleanup(){
+        driver.quit();
+    }
+
 
   /*  @AfterMethod
     public void getOutput() throws IOException, InterruptedException {

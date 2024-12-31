@@ -30,10 +30,7 @@ public class Girls9 extends BaseTest {
         test9.propertiesSetup();
     }
 
-    @AfterClass
-    public void cleanup(){
-        driver.quit();
-    }
+
 
 
     @Test(priority = 1 , dataProvider="testData9Girls",dataProviderClass= testDataFor9Girls.class)

@@ -33,9 +33,6 @@ public class Boys11 extends BaseTest {
         driver.findElement(By.xpath("//input[@jsname='YPqjbf']")).sendKeys("shahpurkhurdu@gmail.com");
         driver.findElement(By.xpath("//span[contains(text(),'Next')]")).click();
         Thread.sleep(400);
-        driver.findElement(By.xpath("//input[@jsname='YPqjbf']")).sendKeys("shahpurkhurdu@gmail.com");
-        driver.findElement(By.xpath("//span[contains(text(),'Next')]")).click();
-        Thread.sleep(400);
         WebElement sname=driver.findElement(By.xpath("//input[@jsname='YPqjbf']"));
         sname.sendKeys(name);
         driver.findElement(By.xpath("//span[text()='Male']")).click();
@@ -79,7 +76,9 @@ public class Boys11 extends BaseTest {
         driver.findElement(By.xpath("//span[text()='"+second+"']")).click();
         //2
         String third= test11.answerProperty11.getProperty("3");
-        driver.findElement(By.xpath("//span[text()='"+third+"']")).click();    //3
+        List<WebElement> thopt = driver.findElements(By.xpath("//span[text()='"+third+"']"));
+        thopt.get(1).click();
+        //3
 
         String fourth= test11.answerProperty11.getProperty("4");
         driver.findElement(By.xpath("//span[text()='"+fourth+"']")).click();;//4
@@ -97,8 +96,7 @@ public class Boys11 extends BaseTest {
         eightopt.get(1).click();  *///8
         //8
         String eight= test11.answerProperty11.getProperty("8");
-        List<WebElement> eightopt = driver.findElements(By.xpath("//span[text()='"+eight+"']"));
-        eightopt.get(0).click();
+        driver.findElement(By.xpath("//span[text()='"+eight+"']")).click();
         //9
         String ninth= test11.answerProperty11.getProperty("9");
         driver.findElement(By.xpath("//span[text()='"+ninth+"']")).click();//10
