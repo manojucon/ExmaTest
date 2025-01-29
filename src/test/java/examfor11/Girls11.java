@@ -93,25 +93,31 @@ public class Girls11 extends BaseTest{
 
         String first= test11.answerProperty11.getProperty("1");
         driver.findElement(By.xpath("//span[text()='"+first+"']")).click();//1
+        Thread.sleep(300);
 
         String second= test11.answerProperty11.getProperty("2");
         driver.findElement(By.xpath("//span[text()='"+second+"']")).click();
+        Thread.sleep(300);
         //2
         String third= test11.answerProperty11.getProperty("3");
-        driver.findElement(By.xpath("//span[text()='"+third+"']")).click();   //3
+        driver.findElement(By.xpath("//span[text()='"+third+"']")).click();
+        Thread.sleep(300);//3
 
         String fourth= test11.answerProperty11.getProperty("4");
         driver.findElement(By.xpath("//span[text()='"+fourth+"']")).click();;//4
+        Thread.sleep(300);
 
         String fifth= test11.answerProperty11.getProperty("5");
-        driver.findElement(By.xpath("//span[text()='"+fifth+"']")).click();    //6
+        driver.findElement(By.xpath("//span[text()='"+fifth+"']")).click();
+        Thread.sleep(300);//6
 
         String sixth= test11.answerProperty11.getProperty("6");
-        driver.findElement(By.xpath("//span[text()='"+sixth+"']")).click();     //7
+        driver.findElement(By.xpath("//span[text()='"+sixth+"']")).click();
+        Thread.sleep(300);//7
 
         String seventh= test11.answerProperty11.getProperty("7");
         driver.findElement(By.xpath("//span[text()='"+seventh+"']")).click();
-        // Multiple Answer
+        Thread.sleep(300);        // Multiple Answer
         /*List<WebElement> eightopt = driver.findElements(By.xpath("//span[text()='"+seventh+"']"));
         eightopt.get(1).click();  *///8
         //8
@@ -119,12 +125,13 @@ public class Girls11 extends BaseTest{
         driver.findElement(By.xpath("//span[text()='"+eight+"']")).click();
         List<WebElement> eightopt = driver.findElements(By.xpath("//span[text()='"+eight+"']"));
         eightopt.get(0).click();
-        //9
+        Thread.sleep(300);        //9
         String ninth= test11.answerProperty11.getProperty("9");
         driver.findElement(By.xpath("//span[text()='"+ninth+"']")).click();//10
-
+        Thread.sleep(300);
         String tenth= test11.answerProperty11.getProperty("10");
         driver.findElement(By.xpath("//span[text()='"+tenth+"']")).click();//10
+        Thread.sleep(300);
 
 
 
