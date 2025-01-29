@@ -6,12 +6,12 @@
         <classes>
             <class name="examfor9.Boys9" />
             <class name="examfor9.Girls9" />
-            <class name="examfor10.Boys10" />
-            <class name="examfor10.Girls10" />
+           <!-- <class name="examfor10.Boys10" />
+            <class name="examfor10.Girls10" />-->
             <class name="examfor11.Boys11" />
             <class name="examfor11.Girls11" />
-            <class name="examfor12.Boys12" />
-            <class name="examfor12.Girls12" />
+           <!-- <class name="examfor12.Boys12" />
+            <class name="examfor12.Girls12" />-->
         </classes>
     </test>
 

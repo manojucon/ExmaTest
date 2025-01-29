@@ -58,7 +58,7 @@ public class Girls9 extends BaseTest {
         Thread.sleep(300);
         m.get(1).click();
         Thread.sleep(300);
-        WebElement button = driver.findElement(By.xpath("//span[text()='9']"));
+        WebElement button = driver.findElement(By.xpath("//span[text()='09']"));
         js.executeScript("arguments[0].click();", button);
 
         textFields.get(4).sendKeys(rollno);
@@ -97,39 +97,51 @@ public class Girls9 extends BaseTest {
         Thread.sleep(900);
         String first= test9.answerProperty9.getProperty("1");
         driver.findElement(By.xpath("//span[text()='"+first+"']")).click();//1
+        Thread.sleep(300);
 
         String second= test9.answerProperty9.getProperty("2");
         driver.findElement(By.xpath("//span[text()='"+second+"']")).click();
+        Thread.sleep(300);
         //2
         String third= test9.answerProperty9.getProperty("3");
         driver.findElement(By.xpath("//span[text()='"+third+"']")).click();//3
+        Thread.sleep(300);
 
         String fourth= test9.answerProperty9.getProperty("4");
         driver.findElement(By.xpath("//span[text()='"+fourth+"']")).click();
+        Thread.sleep(300);
 
         String fifth= test9.answerProperty9.getProperty("5");
-        driver.findElement(By.xpath("//span[text()='"+fifth+"']")).click();    //6
+        driver.findElement(By.xpath("//span[text()='"+fifth+"']")).click();
+        Thread.sleep(300);//6
 
-        String sixth= test9.answerProperty9.getProperty("6");
-        driver.findElement(By.xpath("//span[text()='"+sixth+"']")).click();     //7
+       /* String sixth= test9.answerProperty9.getProperty("6");
+        driver.findElement(By.xpath("//span[text()='"+sixth+"']")).click(); */    //7
+
+        List<WebElement> sixthnew=driver.findElements(By.xpath("//label"));
+        sixthnew.get(21).click();
+        Thread.sleep(300);
 
         String seventh= test9.answerProperty9.getProperty("7");
         driver.findElement(By.xpath("//span[text()='"+seventh+"']")).click();
+        Thread.sleep(300);
         // Multiple Answer
         String eight= test9.answerProperty9.getProperty("8");
-        List<WebElement> eightopt = driver.findElements(By.xpath("//span[text()='"+eight+"']"));
-        eightopt.get(0).click();
+        driver.findElement(By.xpath("//span[text()='"+eight+"']")).click();
+        Thread.sleep(300);
         /*String eight= test9.answerProperty9.getProperty("8");
         driver.findElement(By.xpath("//span[text()='"+eight+"']")).click();*/
         //9
         String ninth= test9.answerProperty9.getProperty("9");
         driver.findElement(By.xpath("//span[text()='"+ninth+"']")).click();//10
+        Thread.sleep(300);
 
        /* String tenth= "Function Keys";
         driver.findElement(By.xpath("//span[text()='"+tenth+"']")).click();*///10
 
         String tenth= test9.answerProperty9.getProperty("10");
         driver.findElement(By.xpath("//span[text()='"+tenth+"']")).click();
+        Thread.sleep(300);
         List<WebElement> wr1=driver.findElements(By.xpath("//label"));
         wr1.get(BaseTest.getSingleDigit()).click();
         List<WebElement> wr2=driver.findElements(By.xpath("//label"));

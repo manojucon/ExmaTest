@@ -98,8 +98,7 @@ public class Girls11 extends BaseTest{
         driver.findElement(By.xpath("//span[text()='"+second+"']")).click();
         //2
         String third= test11.answerProperty11.getProperty("3");
-        List<WebElement>thopt = driver.findElements(By.xpath("//span[text()='"+third+"']"));
-        thopt.get(0).click();    //3
+        driver.findElement(By.xpath("//span[text()='"+third+"']")).click();   //3
 
         String fourth= test11.answerProperty11.getProperty("4");
         driver.findElement(By.xpath("//span[text()='"+fourth+"']")).click();;//4

@@ -52,7 +52,7 @@ public class Boys9 extends BaseTest {
         Thread.sleep(300);
         m.get(1).click();
         Thread.sleep(300);
-        WebElement button = driver.findElement(By.xpath("//span[text()='9']"));
+        WebElement button = driver.findElement(By.xpath("//span[text()='09']"));
         js.executeScript("arguments[0].click();", button);
 
         textFields.get(4).sendKeys(rollno);
